@@ -1,5 +1,18 @@
 # ⚔️ Grand Cross Local — Adventure Log
 
+## 🛡️ ESTADO ATUAL — PASSO 957 APROVADO (29/10/2026)
+- **Último passo executado e validado: 957.** **PASSO 958 ainda não iniciado**; intervalo reservado para realizar backup e auditar o repositório.
+- **[BACKUP TÉCNICO DETALHADO DOS PASSOS 900–957](./docs/BACKUP_TECNICO_PASSO_957.md)** — endereços, hashes, descrição dos experimentos, mapas dos 16 destinos, 15 controles, 30 saídas, 15 convergências estáticas e instruções de retomada. Não inclui binários nem a coleção integral dos scripts/logs.
+- Prefixo de **4.194.304 bytes (4 MiB)** de `.vdata` recuperado repetidamente; SHA-256 `b69ef8861b20e6cbc4111bc4137ac5b67b3c598054af76e53f737072280d67ac`. Cobertura de bytes declarados da seção: **29,681%**, em comparação a 3,710% no passo 900. **Não é percentual de servidor pronto.**
+- PASSO 949: comparação real `CMP/J E` validada por 4 cenários emulados (2 saltos tomados, 2 não tomados); PASSO 950: integração de 115 instruções e salto indireto para 3 destinos artificiais.
+- PASSOS 951–953: tabela de **8 pares** de RVAs que apontam a **16 instruções `JMP rel32` consecutivas** e 16 destinos distintos dentro do prefixo recuperado.
+- PASSOS 954–955: os 16 destinos têm primeira transferência mapeada, **15 Jcc (10 JBE, 5 JE) e 1 RET**. PASSO 956: 30 saídas estáticas. PASSO 957: **30/30 trajetos**, 26 observações JCC, 4 JMP e **15/15 pares com endereços de instrução comuns**, sem prova de execução dinâmica real.
+- **Limites:** decoder completo/segundo estágio real ainda não demonstrados; `CodeRegistration` não localizado; nenhum servidor offline compatível/jogável. O backup é documental; não contém assets proprietários, credenciais ou código original.
+- **Marco formal seguinte:** 1000. Estimativa histórica geral ~34% no marco 900 é **subjetiva e não foi atualizada artificialmente** no 957.
+
+---
+
+
 Diário público de investigação independente do cliente PC de **Seven Deadly Sins: Grand Cross**. Não afiliado à Netmarble.
 
 ## 🏰 Estado atual — CHECKPOINT 900 APROVADO (29/10/2026)
