@@ -2,42 +2,54 @@
 
 Diário público de investigação técnica do cliente PC de **Seven Deadly Sins: Grand Cross**. Projeto independente, não afiliado à Netmarble.
 
-## Estado registrado
-- Último passo concluído: **601** (checkpoint 600 validado)
-- Próximo passo planejado: **602** (inspeção estática dos primeiros bytes da seção `.boot`)
-- Próximo relatório formal: **700** (checkpoint 600 concluído e auditado)
-- **70/70** cabeçalhos UnityFS internos validados na amostra
-- **734** membros `TableType` decodificados
-- **1165** IDs C2S e **624** IDs S2C catalogados
-- **Nenhum servidor local compatível e funcional** validado
+## Estado atual — marco 700 auditado
+- **Último passo concluído: 701**.
+- **Próximo passo preparado: 702** — análise estática dos campos de sete classes de sessão e conexão.
+- **Próximo relatório formal: passo 800**.
+- **Marco 700 concluído** com auditoria estrutural do metadata IL2CPP.
+- **Nenhum servidor offline compatível e funcional** implementado ou validado.
 
-## Painel
-O site está no arquivo [index.html](./index.html), feito com HTML, CSS e JavaScript, sem dependências. Pode ser aberto localmente no navegador. Para disponibilizar uma URL pública é necessário configurar hospedagem, por exemplo GitHub Pages.
+## Painel e comparação histórica
+A página [index.html](./index.html) inclui o painel de progresso, o histórico técnico e a comparação entre os marcos 600 e 700.
 
-## Atualizações
-Registramos descobertas após validação, resumindo os marcos relevantes em vez de inventar uma transcrição de todos os passos. A integração autorizada permite atualizar o GitHub; a execução de PowerShell no PC não sincroniza automaticamente sem um mecanismo adicional.
+| Indicador | Marco 600 | Marco 700 |
+| --- | ---: | ---: |
+| Progresso geral estimado | 25% | 28% |
+| Diferença | — | +3 pontos percentuais |
+
+Os percentuais são **estimativas qualitativas de acompanhamento**, não medidas objetivas de software implementado. Os **dez percentuais individuais do marco 600 não foram recuperados**; o painel apresenta os valores registrados no marco 700, sem inventar diferenças históricas por área.
+
+### Valores registrados no marco 700
+
+| Área | Estimativa |
+| --- | ---: |
+| Ambiente e ferramentas | 95% |
+| Metadados IL2CPP | 90% |
+| Formato PE e GameAssembly | 82% |
+| Arquivos Unity e recursos | 65% |
+| Protocolo e mensagens | 45% |
+| Sistema de missões | 38% |
+| Inicialização do boot | 35% |
+| Autenticação local | 5% |
+| Backend e servidor offline | 0% |
+| Jogo offline funcional | 0% |
+
+## Descobertas confirmadas até o passo 701
+- Metadata IL2CPP v29: **34.451 TypeDefinitions**, **262.861 MethodDefinitions**, **240.898 parâmetros**, **200.338 campos**, **16.530 entradas de interface**, **2.800 contêineres genéricos**, **4.232 parâmetros genéricos**, **89 images** e **89 assemblies**.
+- Definição **System.Collections.Generic.IEnumerator`1** identificada em **TypeDef 25068** (ByValTypeIndex **35455**); contêiner genérico **1065**, com parâmetro **T** em **1518**, posição **0**. A auditoria corrigiu uma interpretação incorreta do deslocamento do contêiner.
+- **3.746 classes** com interface TypeIndex **11115** e o trio de interfaces consistente; **3.726** com padrão `d__` e **20** com padrão `c__Iterator`. A associação de TypeIndex 11115 a uma instanciação de `IEnumerator<object>` é **hipótese fortemente sustentada, não resolução direta**.
+- **11 classes** de comunicação e autenticação localizadas, incluindo `NetmarbleS.SessionPlatform`, `NetmarbleS.Auth`, `WestSidePacketManager`, `RelayPacketManager` e proxies.
+- **Passo 701:** **102 métodos** catalogados em sete classes de sessão, conexão e fluxo. Nomes de métodos **não comprovam a ordem real de execução**.
+- Marcos anteriores preservados: **70/70** cabeçalhos UnityFS internos validados; **734** membros `TableType`; **1.165 IDs C2S** e **624 IDs S2C** catalogados.
+- Análise PE anterior: `GameAssembly.dll` x64, seção `.vdata` virtual sem dados físicos e seção `.boot` RX. A origem do conteúdo de `.vdata` em execução permanece indeterminada.
+
+## Limitações e próximas investigações
+A análise estática do cliente **não equivale** a autenticação local, implementação de backend ou jogo offline funcional. A sequência real de inicialização, a semântica das mensagens e as dependências do servidor permanecem pendentes.
+
+**Próximo passo (702):** inspecionar campos declarados em sete classes selecionadas, de forma local e somente leitura, sem executar o jogo, interceptar tráfego ou modificar arquivos.
 
 ## Segurança e direitos
 Não publicar binários do jogo, assets proprietários, chaves, credenciais ou dados privados. Este repositório contém somente documentação técnica e um painel independente.
 
-## Progresso e estimativas
-- **Checkpoint 600: 100% concluído e validado** (marco de investigação, não percentual do servidor).
-- **601 passos concluídos; passo 602 preparado, ainda não executado.**
-- **Progresso total rumo a um servidor offline:** não quantificável com rigor; nenhum backend local compatível foi implementado ou validado.
-- Análise estática avançada; dinâmica de inicialização e dependências de backend ainda não demonstradas.
-
-## Marcos técnicos — passos 585–601
-- `GameAssembly.dll`: 47.199.760 bytes, PE32+ x64, 14 seções, base preferida `0x180000000`, SHA-256 `FAB18D112F6414090C4CF36C25908FAE1056C87D56E6AC432C053B52E2933DDD`.
-- Exportações: 384 funções nomeadas, 239 com prefixo `il2cpp_`; alguns RVAs exportados caem fora da área física correspondente à seção.
-- `.vdata`: RVA `0x06A83000`, tamanho virtual 14.131.200 bytes, `RawSize=0`, flags **RWX** (`0xE0000060`).
-- `.boot`: RVA `0x077FD000`, tamanho físico/virtual 8.060.416 bytes, flags **RX** (`0x60000060`); inicia imediatamente após `.vdata`.
-- EntryPoint `0x077FD058` começa com `CALL rel32` para rotina em `0x077FD1DF`; fluxo examinado calcula alvo `0x06A9FC32` dentro de `.vdata`, sem bytes físicos associados. Conteúdo em tempo de execução **não determinado**.
-- Diretório de exceções aponta para `.vdata` (`0x07127024`, 3.706.272 bytes declarados), sem conteúdo físico nessa seção.
-- Importações declaradas: 10 DLLs / 10 funções; uma delas `Baselib_DynamicLibrary_GetFunction`; presença não prova como `.vdata` é inicializada.
-- TLS: 40 bytes; `AddressOfCallbacks=0`, sem lista de callbacks declarada.
-- Relocations: 16 bytes; três entradas `DIR64` nos campos TLS e uma `ABSOLUTE` de preenchimento.
-- `DllCharacteristics=0x0060`: ASLR e HIGH_ENTROPY_VA declarados; NX_COMPAT não declarado.
-- **Checkpoint 600:** 18/19 verificações inicialmente aprovadas; a divergência foi um erro nas máscaras de permissão dos scripts, corrigido e confirmado no passo 601. `.vdata` RWX, `.boot` RX, contiguidade e ausência de dados físicos `.vdata` verificadas.
-
-## Próxima investigação
-**PASSO 602:** examinar os 88 bytes anteriores ao EntryPoint de `.boot`, e comparar os primeiros 96 bytes do EntryPoint e da rotina chamada. Apenas análise estática; não há evidência de um servidor offline funcional.
+## Atualizações
+O site é HTML/CSS/JavaScript sem dependências. Atualizações no GitHub exigem commits; executar PowerShell no computador não sincroniza automaticamente com este repositório.
