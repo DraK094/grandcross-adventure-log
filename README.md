@@ -1,8 +1,51 @@
 # ⚔️ Grand Cross Local — Adventure Log
 
-Diário público de investigação técnica do cliente PC de **Seven Deadly Sins: Grand Cross**. Projeto independente, não afiliado à Netmarble.
+Diário público de investigação independente do cliente PC de **Seven Deadly Sins: Grand Cross**. Não afiliado à Netmarble.
 
-## Estado atual — marco 800 auditado (29/10/2026)
+## 🏰 Estado atual — CHECKPOINT 900 APROVADO (29/10/2026)
+- **Último passo executado e validado: 900**.
+- **Passo 901:** script de reconstrução de 1 MiB entregue, **ainda não executado**.
+- **Próximo checkpoint:** 1000.
+- **[Relatório e tabela comparativa 800 → 900](./docs/CHECKPOINT_900.md)**.
+- **[BACKUP TÉCNICO DE RETOMADA — PASSO 900](./docs/BACKUP_TECNICO_PASSO_900.md)** (documentação de conhecimento; não é backup dos binários, scripts completos ou assets).
+- [Backup do marco 800](./docs/CHECKPOINT_800.md) · [Backup técnico anterior, passo 720](./docs/BACKUP_TECNICO_PASSO_720.md) · [Painel web](./index.html).
+
+### Tabela dos checkpoints
+| Marco | Progresso técnico geral estimado | Diferença |
+| --- | ---: | ---: |
+| 600 | 25% | — |
+| 700 | 28% | +3 p.p. |
+| 800 | ~31% | +3 p.p. |
+| 900 | **~34% (provisório)** | **~+3 p.p.** |
+
+**Atenção:** os percentuais acima são estimativas **qualitativas e subjetivas do conhecimento técnico**, não frações do software pronto. O avanço quantitativo verificável é **524.288 / 14.131.200 bytes (3,710%) do espaço virtual .vdata** recuperados como prefixo. Nenhum servidor offline compatível ou jogável foi validado.
+
+### Evolução por área · 800 → 900 (estimativas qualitativas)
+| Área | 800 | 900 | Δ |
+| --- | ---: | ---: | ---: |
+| Ambiente e ferramentas | 95% | 96% | +1 p.p. |
+| Metadados IL2CPP | 95% | 95% | 0 |
+| Formato PE e GameAssembly | 84% | 89% | +5 p.p. |
+| Arquivos Unity e recursos | 68% | 68% | 0 |
+| Protocolo e mensagens | 58% | 58% | 0 |
+| Sistema de missões | 38% | 38% | 0 |
+| Inicialização do boot | 35% | 60% | +25 p.p. |
+| Autenticação local | 9% | 9% | 0 |
+| Backend e servidor offline | 0% | 0% | 0 |
+| Jogo offline funcional | 0% | 0% | 0 |
+
+A reavaliação de boot mede capacidade de análise e emulação do descompressor, não prova execução do segundo estágio. O valor geral não é média dos percentuais por área.
+
+### Evidências do passo 900
+- Descompressor .boot mapeado; 4 rotas REP MOVSB; 27/27 cópias sobrepostas testadas nos primeiros 128 KiB.
+- Prefixo de **512 KiB** reproduzido com SHA256 `8dbae2603dd37c17c6717167401d1c9d673a4178e59cabdd767612cf26f5eb19`; hashes de 128/256 KiB igualmente confirmados.
+- Monitoramento híbrido validado: parada exata; RIP `0x1877FD1A5`, RSI `0x186AFA61B`, RDI `0x186B03000`, excedente 0; tempo 3,576512 s no PASSO 900.
+- Implementação alternativa em Python preservou hashes mas foi mais lenta no benchmark end-to-end; modo híbrido reduziu custo de monitoramento.
+- **Ainda não comprovados:** saída integral, execução do segundo estágio, CodeRegistration, MetadataRegistration, login real e servidor jogável.
+
+## Histórico pré-checkpoint 900
+
+## Histórico — marco 800 auditado (29/10/2026)
 - **Último passo concluído: 800**; auditoria integral com resultado OK.
 - **Próximo passo: 801**, script *Inventário Arquitetural* entregue e **ainda não executado**.
 - **Próximo checkpoint formal: 900**.
