@@ -2,6 +2,54 @@
 
 Diário público de investigação técnica do cliente PC de **Seven Deadly Sins: Grand Cross**. Projeto independente, não afiliado à Netmarble.
 
+## Estado atual — marco 800 auditado (29/10/2026)
+- **Último passo concluído: 800**; auditoria integral com resultado OK.
+- **Próximo passo: 801**, script *Inventário Arquitetural* entregue e **ainda não executado**.
+- **Próximo checkpoint formal: 900**.
+- Servidor local funcional: **não implementado**.
+- **[Backup de retomada do marco 800](./docs/CHECKPOINT_800.md)**. Contexto detalhado anterior: [backup técnico até passo 720](./docs/BACKUP_TECNICO_PASSO_720.md).
+- Painel [index.html](./index.html) atualizado para o marco 800.
+
+### Marcos e comparação correta
+| Marco | Progresso técnico geral estimado |
+| --- | ---: |
+| 600 | 25% |
+| 700 | 28% |
+| 800 | ~31% |
+
+As porcentagens são **estimativas qualitativas**, não progresso de software funcional. Os valores individuais do marco 600 não foram recuperados e não devem ser inventados; por área a comparação fundamentada é **700 vs. 800**.
+
+### Áreas — marco 700 → 800
+| Área | 700 | 800 |
+| --- | ---: | ---: |
+| Ambiente e ferramentas | 95% | 95% |
+| Metadados IL2CPP | 90% | 95% |
+| Formato PE e GameAssembly | 82% | 84% |
+| Arquivos Unity e recursos | 65% | 68% |
+| Protocolo e mensagens | 45% | 58% |
+| Sistema de missões | 38% | 38% |
+| Inicialização do boot | 35% | 35% |
+| Autenticação local | 5% | 9% |
+| Backend e servidor offline | 0% | 0% |
+| Jogo offline funcional | 0% | 0% |
+
+### Auditoria de metadados — passo 800
+- IL2CPP v29: 34.451 TypeDefs, 262.861 MethodDefs, 200.338 Fields, 2.800 GenericContainers, 4.232 GenericParameters.
+- `SyncPacketBase<T>`: TypeDef 12874, contêiner 333; `SyncPacketMarshaler<T>`: TypeDef 12875, contêiner 334. Parâmetro T confirmado em ambas.
+- PvP: 16 classes, 22 campos, 32 métodos. Destroy: 17 classes, 27 campos, 35 métodos. Total: 33 classes, 49 campos, 67 métodos.
+- 33 identificadores de pacotes decodificados no passo 792, sem validação de formato na rede.
+- Marshalers concretos localizados; descritores genéricos concretos, corpos de métodos, serialização e protocolo funcional pendentes.
+
+### Próxima fase
+Investigar inventário arquitetural e planejar protótipo **independente**. O PASSO 801 aguarda saída do PowerShell 5.1 do usuário. Cada passo é read-only, autossuficiente e validado antes do próximo. Não versionar binários, assets proprietários, chaves ou credenciais.
+
+---
+## Histórico anterior preservado
+
+# ⚔️ Grand Cross Local — Adventure Log
+
+Diário público de investigação técnica do cliente PC de **Seven Deadly Sins: Grand Cross**. Projeto independente, não afiliado à Netmarble.
+
 ## Estado atual — análise até o passo 720 (marco 700 auditado)
 - **Último passo concluído: 720**.
 - **Próximo passo preparado: 721 (ainda não executado)** — validar formatos compactado-4 e F0-UInt32LE com cinco constantes XXHash32.
