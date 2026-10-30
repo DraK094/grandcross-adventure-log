@@ -1,5 +1,14 @@
 # ⚔️ Grand Cross Local — Adventure Log
 
+## 🧬 OBJETIVO 2 — INICIALIZAÇÃO DO CÓDIGO RECONSTRUÍDO (PASSO 1006)
+
+**Status: EM ANDAMENTO** (não marcar como concluído sem comprovar o caminho completo de inicialização e handoff ao runtime IL2CPP). Passos 1001–1006 aprovados em auditorias estáticas com a DLL original: contador exato **1652** no laço RVA `0x6D81523`, mesmo laço estudado no passo 942; `.boot` calcula base `.vdata` e prepara `JMP RAX` para `.vdata+0x1CC32` após verificar/carregar a seção. Ainda faltam estados dinâmicos, resolução de despachos indiretos e prova de inicialização do IL2CPP.
+
+[1001–1004](./docs/PASSOS_1001_1004_CONTADOR_1652.md) · [1005](./docs/PASSO_1005_UNIFICACAO_LOOP_942.md) · [1006](./docs/PASSO_1006_HANDOFF_BOOT_VDATA.md). **Último passo: 1006; próximo: 1007.**
+
+---
+
+
 ## 🏆 MARCO 1000 — 30/10/2026
 
 📊 **[Relatório especial PASSO 1000 — comparação 800/900/957/959/1000, conquistas e progresso real](./docs/RELATORIO_ESPECIAL_PASSO_1000.md)**
