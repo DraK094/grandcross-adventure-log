@@ -1,0 +1,31 @@
+{
+  "lastStep": 1245,
+  "assembly": "Assembly-CSharp-firstpass.dll",
+  "total": 20548,
+  "abstract": 158,
+  "genericDefinitions": 14,
+  "static": 4149,
+  "targets": [
+    {
+      "token": "0x600328c",
+      "methodDefinition": 176145,
+      "candidateSlot": 12939
+    },
+    {
+      "token": "0x600328d",
+      "methodDefinition": 176146,
+      "candidateSlot": 12940
+    },
+    {
+      "token": "0x6003292",
+      "methodDefinition": 176151,
+      "candidateSlot": 12945
+    },
+    {
+      "token": "0x6003293",
+      "methodDefinition": 176152,
+      "candidateSlot": 12946
+    }
+  ],
+  "verifiedNativeRvas": 0
+}
