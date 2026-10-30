@@ -1,0 +1,3 @@
+# GrandCross Local - passos 1422 a 1429
+
+Leituras: RVA 0x6DFD60 e 0x6DFDE0, 128 bytes cada. Colecao do campo +0x108: elemento com bytes em offsets internos +0x10 e +0x11, e dword em +0x14; chamadas para RVA 0x4349D00 (duas) e RVA 0x6BD5A0; laco ate RVA 0x6DFD54. Colecao do campo +0x110: elemento com byte em +0x10 e qword em +0x18; chamadas RVA 0x43480D0 e RVA 0x4348220; laco entre RVA 0x6DFE00 e 0x6DFE40. Nova referencia carregada de [rdi+0x118] no RVA 0x6DFE49; sem classificacao. Os bytes finais terminam no meio de uma instrucao de chamada. Nomes de campos e bytes de rede desconhecidos; nao existe teste comprovando servidor local funcional.
