@@ -4,8 +4,6 @@ on:
   push:
     paths:
       - 'checkpoints/PASSO_*.json'
-      - '.github/workflows/grandcross-checkpoint.yml'
-      - 'scripts/validate_checkpoint.py'
   workflow_dispatch:
     inputs:
       step:
