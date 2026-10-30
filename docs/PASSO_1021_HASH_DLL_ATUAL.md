@@ -1,0 +1,3 @@
+# PASSO 1021 — SHA-256 da DLL instalada
+
+Resultado informado pelo usuário do PowerShell `Get-FileHash`: SHA256 atual `01761332EA33C2FF2C88B3FEA8DA924CD8482D7DFA86B5B02C1C1CB6F1660624`, arquivo instalado com 47.294.480 bytes. DLL anterior de 47.199.760 bytes e SHA-256 `fab18d112f6414090c4cf36c25908fae1056c87d56e6ac432c053b52e2933ddd`. São arquivos diferentes em tamanho e hash. A identificação da versão instalada está concluída; **a análise comparativa de seções e a inicialização IL2CPP não**. Próximo: receber cópia da nova DLL para análise estática; não usar automaticamente RVAs anteriores. Objetivo 2 EM ANDAMENTO. Nenhum binário proprietário no GitHub.
