@@ -1,0 +1,13 @@
+{
+  "steps": [
+    1273,
+    1274,
+    1275,
+    1276
+  ],
+  "functionRva": "0x42D378",
+  "imageBaseReferenceRva": "0x0",
+  "indexedTableRva": "0x6326F10",
+  "anotherDataRva": "0x62FD648",
+  "nativeMethodValidated": false
+}
