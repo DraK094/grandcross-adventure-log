@@ -1,0 +1,31 @@
+{
+  "steps": [
+    1246,
+    1247,
+    1248
+  ],
+  "assembly": "Assembly-CSharp-firstpass.dll",
+  "methodCount": 20548,
+  "methodDefinitionStart": 163206,
+  "methodDefinitionEnd": 183753,
+  "ridContinuous": true,
+  "methodDefinitionContinuous": true,
+  "abstract": 158,
+  "genericDefinitions": 14,
+  "abstractBeforeTarget": 116,
+  "genericBeforeTarget": 11,
+  "targetRids": [
+    12940,
+    12941,
+    12946,
+    12947
+  ],
+  "candidateSlots": [
+    12939,
+    12940,
+    12945,
+    12946
+  ],
+  "verifiedNativeAddresses": 0,
+  "codeGenModuleLocated": false
+}
