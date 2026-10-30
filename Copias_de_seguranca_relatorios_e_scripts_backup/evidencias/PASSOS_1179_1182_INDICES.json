@@ -1,0 +1,36 @@
+{
+  "methods": [
+    [
+      "Write",
+      "0x600328c",
+      176145
+    ],
+    [
+      "Read",
+      "0x600328d",
+      176146
+    ],
+    [
+      "Write",
+      "0x6003292",
+      176151
+    ],
+    [
+      "Read",
+      "0x6003293",
+      176152
+    ]
+  ],
+  "flags": "0x96",
+  "implFlags": "0x0",
+  "vdata": {
+    "virtualSize": 14131200,
+    "rawSize": 0
+  },
+  "boot": {
+    "rawSize": 8043008
+  },
+  "validatedNativeRvas": 0,
+  "validatedRmiIds": 0,
+  "validatedWireFrames": 0
+}
