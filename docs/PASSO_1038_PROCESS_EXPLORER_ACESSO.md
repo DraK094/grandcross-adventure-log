@@ -1,0 +1,3 @@
+# PASSO 1038 — Process Explorer: acesso negado nas propriedades
+
+Captura fornecida pelo usuário: propriedades do `7dsgc.exe` PID 27692; Image x64; Parent `Netmarble Launcher.exe (16712)`; Started 30/10/2026 01:40:38; Path `[Acesso negado.]`; campo Command line vazio; DEP Enabled (permanent); ASLR High-Entropy, Bottom-Up. O painel de módulos anterior também estava vazio. **Conclusão limitada:** há restrição de acesso/visibilidade nas consultas feitas, sem identificação comprovada do mecanismo responsável. Nenhuma justificativa para contornar proteções. Objetivo 2 inicialização completa IL2CPP permanece EM ANDAMENTO. Próxima etapa: análise estática independente a partir das cópias já fornecidas; não pedir credenciais ou coleta de memória protegida.
