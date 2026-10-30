@@ -1,0 +1,5 @@
+# GrandCross Local — PASSO 1240
+
+Dados fornecidos pelo usuário: processo 7dsgc.exe PID 30012, endereço RVA 0x20B2740 mapeado em VA 0x7FFD02602740. `VirtualQueryEx`: State 0x1000 MEM_COMMIT, Protect 0x20 PAGE_EXECUTE_READ, Type 0x1000000 MEM_IMAGE. `ReadProcessMemory` leu 16/16 bytes: `40 53 48 83 EC 20 48 8B D9 48 8B 89 D8 00 00 00`.
+
+Decodificação x64 provável: `40 53` -> push rbx; `48 83 EC 20` -> sub rsp,0x20; `48 8B D9` -> mov rbx,rcx; `48 8B 89 D8 00 00 00` -> mov rcx,[rcx+0xd8]. Indicativo de corpo de função x64, não valida nome ou identidade de método IL2CPP. Primeiro endereço além de bytes brutos havia sido identificado pela tabela de unwind. Nenhum CodeRegistration, ID RMI ou marshaler do login foi localizado. Próximo passo 1241 ainda pendente: inspeção de funções em imagem com critério de vínculo a metadados, se tecnicamente viável. Sem modificar o processo.
