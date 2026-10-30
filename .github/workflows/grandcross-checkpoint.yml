@@ -1,0 +1,40 @@
+name: GrandCross Local - Validar e arquivar checkpoint
+
+on:
+  push:
+    paths:
+      - 'checkpoints/PASSO_*.json'
+      - '.github/workflows/grandcross-checkpoint.yml'
+      - 'scripts/validate_checkpoint.py'
+  workflow_dispatch:
+    inputs:
+      step:
+        description: 'Numero do passo (multiplo de 10)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Encontrar e validar checkpoints
+        id: check
+        env:
+          CHECKPOINT_STEP: ${{ github.event.inputs.step }}
+        run: |
+          mkdir -p checkpoint-export
+          python3 scripts/validate_checkpoint.py --dir checkpoints --out checkpoint-export --step "$CHECKPOINT_STEP"
+      - name: Arquivar pacote de evidencias
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grandcross-checkpoints-${{ github.run_number }}
+          path: checkpoint-export/
+          if-no-files-found: error
+          retention-days: 90
