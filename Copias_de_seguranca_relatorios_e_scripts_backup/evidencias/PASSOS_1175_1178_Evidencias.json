@@ -1,0 +1,59 @@
+{
+  "metadataSha256": "eea7a31712bfca44caaa85cee3874ae9092a035556fcdef10f6c6a1fe156448b",
+  "steps": [
+    1175,
+    1176,
+    1177,
+    1178
+  ],
+  "LoginServiceInfoFields": [
+    "currentServerTime",
+    "maintenanceInfo",
+    "emergencyNoticeInfo",
+    "remainResetTimeSEC"
+  ],
+  "WestSideUserInfoFields": [
+    "userUSN",
+    "nickName",
+    "userRankExp",
+    "guildName",
+    "point",
+    "skinID",
+    "skinCostumeGroupID",
+    "weaponCostumeGroupID",
+    "headCostumeGroupID",
+    "isHeadStyleChanged",
+    "guildIconID",
+    "guildSubIconID",
+    "guildBackgroundID",
+    "playTitleID",
+    "interactiveObjectID"
+  ],
+  "MarshalerMethods": [
+    {
+      "token": "0x600328c",
+      "method": "Write",
+      "msgTypeIndex": 40600,
+      "tyTypeIndex": 40152
+    },
+    {
+      "token": "0x600328d",
+      "method": "Read",
+      "msgTypeIndex": 40600,
+      "tyTypeIndex": 22543
+    },
+    {
+      "token": "0x6003292",
+      "method": "Write",
+      "msgTypeIndex": 40600,
+      "tyTypeIndex": 40148
+    },
+    {
+      "token": "0x6003293",
+      "method": "Read",
+      "msgTypeIndex": 40600,
+      "tyTypeIndex": 22542
+    }
+  ],
+  "limitation": "FieldDefinition order is not proven wire write order; no native body or bytes recovered."
+}
