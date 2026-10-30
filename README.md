@@ -1,5 +1,12 @@
 # ⚔️ Grand Cross Local — Adventure Log
 
+## 🔎 PASSOS 1041–1044 — Importações e IAT (30/10/2026)
+
+**Último passo auditado: 1044; próximo: 1045, ainda não executado.** As duas versões da GameAssembly.dll importam os mesmos **10 símbolos diretamente**, um por biblioteca. Entre eles, `GetModuleHandleA` e o símbolo de resolução `Baselib_DynamicLibrary_GetFunction` (o nome não prova chamada). A `.vdata` atual, reconstruída e validada por hash, contém **uma ocorrência literal** de RVA `0x06AE0260` no offset `.vdata+0xF189`, que corresponde à célula IAT de `GetModuleHandleA`, porém **sem evidência de uso efetivo**; os outros nove RVAs não tiveram coincidências literais nas duas representações varridas. **Objetivo 2 — inicialização IL2CPP completa: EM ANDAMENTO.** [Auditoria 1041–1043](./docs/PASSOS_1041_1043_IMPORTS_E_REFERENCIAS.md) · [Contexto 1044](./docs/PASSO_1044_CONTEXTO_IAT.md).
+
+---
+
+
 ## 🔐 NOVO CHECKPOINT — PASSO 1036 (30/10/2026)
 
 **Último passo auditado 1036; 1037 NÃO executado.** Na DLL atual (SHA256 `01761332ea33c2ff2c88b3fea8da924cd8482d7dfa86b5b02c1c1cb6f1660624`), mapeados os blocos estáticos após a nova entrada e laço atômico; encontrada nova instrução de despacho `JMP QWORD PTR [RAX]` em RVA `0x6DF45A0`. A expressão depende dos estados reais de pilha, registradores e memória do cliente, **não resolvidos por bytes estáticos**. **Objetivo 1: 100% da seção `.vdata` atual reconstruída; Objetivo 2: EM ANDAMENTO.** [1028–1030](./docs/PASSOS_1028_1030_LOOP_ATOMICO_ATUAL.md) · [1031–1035](./docs/PASSOS_1031_1035_DESPACHANTE_ATUAL.md) · [1036](./docs/PASSO_1036_DEPENDENCIA_ESTADO.md). Sem comprovação de execução integral ou servidor local funcional.
