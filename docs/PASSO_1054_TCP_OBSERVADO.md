@@ -1,0 +1,5 @@
+# PASSO 1054 — Primeira observação TCP do cliente
+
+Saída fornecida pelo usuário: conexão associada a `7dsgc.exe` local `192.168.1.106:59142` -> `43.174.218.165:23071` Established; `192.168.1.106:51619` -> `13.227.207.66:80` CloseWait; conexão loopback `127.0.0.1:50790` <-> `127.0.0.1:50789` Established. Sockets Bound: `[::]:59142`, `0.0.0.0:51619`, `0.0.0.0:50790`. Comunicação externa e local observadas, sem identificação do protocolo de aplicação, nome do serviço, conteúdos ou vínculo de região.
+
+**Próximo PASSO 1055 planejado:** consulta somente leitura para identificar PID responsável por cada ponta loopback, repetir conexões TCP e observar se porta 23071 persiste durante transição oficial de telas. Não capturar credenciais nem interferir na autenticação. Objetivo de servidor local compatível permanece PENDENTE, e inicialização IL2CPP permanece EM ANDAMENTO.
