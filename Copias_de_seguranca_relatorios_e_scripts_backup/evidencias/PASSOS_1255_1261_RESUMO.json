@@ -1,0 +1,17 @@
+{
+  "steps": [
+    1255,
+    1256,
+    1257,
+    1258,
+    1259,
+    1260,
+    1261
+  ],
+  "importDescriptors": 10,
+  "importsEachOneThunk": true,
+  "tlsCallbacksDeclared": 0,
+  "entryPointRva": "0x785c058",
+  "il2cppInitRva": "0x344b60",
+  "codeGenModuleFound": false
+}
