@@ -1,0 +1,43 @@
+{
+  "steps": [
+    1183,
+    1184,
+    1185,
+    1186
+  ],
+  "methods": [
+    {
+      "token": "0x600328c",
+      "methodDef": 176145
+    },
+    {
+      "token": "0x600328d",
+      "methodDef": 176146
+    },
+    {
+      "token": "0x6003292",
+      "methodDef": 176151
+    },
+    {
+      "token": "0x6003293",
+      "methodDef": 176152
+    }
+  ],
+  "pe": {
+    "imageBase": "0x180000000",
+    "entryRVA": "0x785c058",
+    "vdata": {
+      "rva": "0x6ae2000",
+      "virtualSize": 14131200,
+      "rawSize": 0
+    },
+    "boot": {
+      "rva": "0x785c000",
+      "rawSize": 8043008
+    },
+    "exportCount": 384
+  },
+  "validatedNativeRvas": 0,
+  "validatedRmiIds": 0,
+  "validatedWireFrames": 0
+}
