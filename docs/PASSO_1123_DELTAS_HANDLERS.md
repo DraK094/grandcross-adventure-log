@@ -1,0 +1,5 @@
+# PASSO 1123 — Deltas exatos dos handlers entre metadados
+
+Comparacao estrutural executada autonomamente no `global-metadata(1).dat` e `global-metadata(2).dat` com chave (assembly, namespace, classe, nome do metodo, nomes dos parametros). Sete classes sofreram mudancas de assinatura. Cinco metodos novos: `CG_RequestArtifactArenaTagTeamChangeOK`, `CG_RequestCostumeLevelUpAtOnceOK`, `UpdateEventStagePlayCountsByDailyReset`, `CG_RequestNoticeMailRewardAllOK`, `CG_RequestSkinOneStepEvolutionAtOnceOK`. Dois metodos existentes ganharam um argumento cada: `CG_RequestArenaRealTimePvpLastRankerListOK` recebeu `arenaPvpTagRankerList`; `CG_RequestGuildApplyOK` recebeu `remainRejoinDays`.
+
+Mudancas de assinaturas sao provadas no metadata, mas nao demonstram ids RMI, protocolo de transporte, ordem de chamadas ou funcionamento do jogo com backend local. `PASSO 1123` concluido como comparacao estatica; `1124` pendente. Nenhum arquivo proprietario enviado.
