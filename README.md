@@ -1,5 +1,12 @@
 # ⚔️ Grand Cross Local — Adventure Log
 
+## 🔎 OBJETIVO 2 — STATUS PASSO 1013 (30/10/2026)
+
+**Em andamento — impedimento técnico identificado.** Passos 1010–1013: a DLL exporta 384 nomes (239 com `il2cpp`), incluindo `il2cpp_init` RVA `0x3458B0`, mas esse RVA fica além dos bytes brutos armazenados na sua seção. **356/384** destinos exportados não estão diretamente respaldados por bytes na cópia em disco. Outras seções anteriores à `.vdata` somam **72.529.358 bytes** de excedente virtual sobre raw; isso não significa que esse total seja código recuperável. Para demonstrar toda a inicialização, é necessário identificar o carregamento real de código e os estados de execução, além da `.vdata` decodificada. O segundo check verde **não está justificado**. [Auditoria 1010–1012](./docs/PASSOS_1010_1012_ENTRADAS_IL2CPP.md) · [Mapa PE 1013](./docs/PASSO_1013_MAPA_LACUNAS_PE.md). Próximo: 1014, **não executado**. Sem servidor offline funcional.
+
+---
+
+
 ## 🧩 Metadados recebidos — PASSOS 1007–1009
 
 Cópia `global-metadata.dat` (31.786.920 bytes) validada: assinatura IL2CPP v29, 31 regiões do cabeçalho coerentes, **34.451 definições de tipos, 89 imagens e 89 assemblies**; primeira imagem `Assembly-CSharp.dll` com 20.065 tipos. **Objetivo 2 permanece EM ANDAMENTO**: ainda faltam os registros nativos e comprovação da cadeia de inicialização. [Auditoria 1007–1009](./docs/PASSOS_1007_1009_AUDITORIA_METADATA.md). Próximo: PASSO 1010.
