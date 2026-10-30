@@ -1,0 +1,22 @@
+{
+  "steps": [
+    1190,
+    1191,
+    1192,
+    1193,
+    1194,
+    1195,
+    1196
+  ],
+  "vdataBytes": 14131200,
+  "vdataSha256": "72147fdd436f457250e117be65c722aaa1f52f48d3887092fb8e994934f09231",
+  "peSectionCount": 14,
+  "blankNamedSections": 7,
+  "stringMatches": 0,
+  "validImageAbsolutePointersOutsideTLS": 0,
+  "tlsLocalPointers": 3,
+  "validatedCodeRegistration": false,
+  "validatedMethodRvas": 0,
+  "verifiedRmiIds": 0,
+  "verifiedWireMessages": 0
+}
