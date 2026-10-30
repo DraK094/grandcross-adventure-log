@@ -1,5 +1,12 @@
 # ⚔️ Grand Cross Local — Adventure Log
 
+## 🔐 NOVO CHECKPOINT — PASSO 1036 (30/10/2026)
+
+**Último passo auditado 1036; 1037 NÃO executado.** Na DLL atual (SHA256 `01761332ea33c2ff2c88b3fea8da924cd8482d7dfa86b5b02c1c1cb6f1660624`), mapeados os blocos estáticos após a nova entrada e laço atômico; encontrada nova instrução de despacho `JMP QWORD PTR [RAX]` em RVA `0x6DF45A0`. A expressão depende dos estados reais de pilha, registradores e memória do cliente, **não resolvidos por bytes estáticos**. **Objetivo 1: 100% da seção `.vdata` atual reconstruída; Objetivo 2: EM ANDAMENTO.** [1028–1030](./docs/PASSOS_1028_1030_LOOP_ATOMICO_ATUAL.md) · [1031–1035](./docs/PASSOS_1031_1035_DESPACHANTE_ATUAL.md) · [1036](./docs/PASSO_1036_DEPENDENCIA_ESTADO.md). Sem comprovação de execução integral ou servidor local funcional.
+
+---
+
+
 ## 🔎 OBJETIVO 2 — STATUS PASSO 1013 (30/10/2026)
 
 **Em andamento — impedimento técnico identificado.** Passos 1010–1013: a DLL exporta 384 nomes (239 com `il2cpp`), incluindo `il2cpp_init` RVA `0x3458B0`, mas esse RVA fica além dos bytes brutos armazenados na sua seção. **356/384** destinos exportados não estão diretamente respaldados por bytes na cópia em disco. Outras seções anteriores à `.vdata` somam **72.529.358 bytes** de excedente virtual sobre raw; isso não significa que esse total seja código recuperável. Para demonstrar toda a inicialização, é necessário identificar o carregamento real de código e os estados de execução, além da `.vdata` decodificada. O segundo check verde **não está justificado**. [Auditoria 1010–1012](./docs/PASSOS_1010_1012_ENTRADAS_IL2CPP.md) · [Mapa PE 1013](./docs/PASSO_1013_MAPA_LACUNAS_PE.md). Próximo: 1014, **não executado**. Sem servidor offline funcional.
