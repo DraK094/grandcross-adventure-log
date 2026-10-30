@@ -1,0 +1,3 @@
+# GrandCross Local — passos 1381–1384
+
+A leitura do usuario trouxe offsets +0x200 e +0x280 da funcao candidata em RVA 0x6DF460. Foram observadas referencias a colecoes nos campos +0x50 e +0x58, somadas aos campos +0x40 e +0x48 anteriormente identificados. Os blocos consultam contagens em +0x18 e percorrem elementos por indices, utilizando chamadas auxiliares. A identidade e tipos dos campos, e a serializacao efetiva, permanecem nao comprovados. As amostras podem cruzar limites de instrucoes e devem ser concatenadas antes da desmontagem. Nao existe cliente conectado ao servidor local comprovado.
