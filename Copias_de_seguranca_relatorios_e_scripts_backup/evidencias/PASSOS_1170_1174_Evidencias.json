@@ -1,0 +1,156 @@
+{
+  "metadataSHA256": "eea7a31712bfca44caaa85cee3874ae9092a035556fcdef10f6c6a1fe156448b",
+  "steps": {
+    "1170": "Correlacionar tipos de parâmetros de handlers com overloads Write",
+    "1171": "Confirmar Write para userInfo e loginServiceInfo",
+    "1172": "Verificar pares Read adjacentes e tokens",
+    "1173": "Verificar parâmetros auxiliares e limites de correspondência",
+    "1174": "Auditoria e separação entre metadata e wire format"
+  },
+  "matches": [
+    {
+      "handler": "CG_RequestLoginOK",
+      "parameter": "remote",
+      "typeIndex": 35126,
+      "marshalWriteMatches": []
+    },
+    {
+      "handler": "CG_RequestLoginOK",
+      "parameter": "rmiContext",
+      "typeIndex": 44373,
+      "marshalWriteMatches": []
+    },
+    {
+      "handler": "CG_RequestLoginOK",
+      "parameter": "userInfo",
+      "typeIndex": 40152,
+      "marshalWriteMatches": [
+        {
+          "writeToken": "0x600328c",
+          "readToken": "0x600328d",
+          "writeTypeIndex": 40152,
+          "readTypeIndex": 22543,
+          "pairOrdinalZeroBased": 204
+        }
+      ]
+    },
+    {
+      "handler": "CG_RequestLoginOK",
+      "parameter": "loginServiceInfo",
+      "typeIndex": 40148,
+      "marshalWriteMatches": [
+        {
+          "writeToken": "0x6003292",
+          "readToken": "0x6003293",
+          "writeTypeIndex": 40148,
+          "readTypeIndex": 22542,
+          "pairOrdinalZeroBased": 207
+        }
+      ]
+    },
+    {
+      "handler": "CG_RequestLoginInstantlyOK",
+      "parameter": "remote",
+      "typeIndex": 35126,
+      "marshalWriteMatches": []
+    },
+    {
+      "handler": "CG_RequestLoginInstantlyOK",
+      "parameter": "rmiContext",
+      "typeIndex": 44373,
+      "marshalWriteMatches": []
+    },
+    {
+      "handler": "CG_RequestLoginInstantlyOK",
+      "parameter": "sendDailyReset",
+      "typeIndex": 50187,
+      "marshalWriteMatches": [
+        {
+          "writeToken": "0x600343e",
+          "readToken": "0x600343f",
+          "writeTypeIndex": 50187,
+          "readTypeIndex": 23063,
+          "pairOrdinalZeroBased": 421
+        }
+      ]
+    },
+    {
+      "handler": "CG_RequestLoginInstantlyOK",
+      "parameter": "sessionKey",
+      "typeIndex": 37800,
+      "marshalWriteMatches": []
+    },
+    {
+      "handler": "CG_RequestLoginInstantlyOK",
+      "parameter": "loginServiceInfo",
+      "typeIndex": 40148,
+      "marshalWriteMatches": [
+        {
+          "writeToken": "0x6003292",
+          "readToken": "0x6003293",
+          "writeTypeIndex": 40148,
+          "readTypeIndex": 22542,
+          "pairOrdinalZeroBased": 207
+        }
+      ]
+    },
+    {
+      "handler": "CG_RequestNetmarbleAuthOK",
+      "parameter": "remote",
+      "typeIndex": 35126,
+      "marshalWriteMatches": []
+    },
+    {
+      "handler": "CG_RequestNetmarbleAuthOK",
+      "parameter": "rmiContext",
+      "typeIndex": 44373,
+      "marshalWriteMatches": []
+    },
+    {
+      "handler": "CG_RequestNetmarbleAuthOK",
+      "parameter": "info",
+      "typeIndex": 41435,
+      "marshalWriteMatches": [
+        {
+          "writeToken": "0x600327a",
+          "readToken": "0x600327b",
+          "writeTypeIndex": 41435,
+          "readTypeIndex": 22608,
+          "pairOrdinalZeroBased": 195
+        }
+      ]
+    },
+    {
+      "handler": "CG_RequestAuthenticateCreateOK",
+      "parameter": "remote",
+      "typeIndex": 35126,
+      "marshalWriteMatches": []
+    },
+    {
+      "handler": "CG_RequestAuthenticateCreateOK",
+      "parameter": "rmiContext",
+      "typeIndex": 44373,
+      "marshalWriteMatches": []
+    },
+    {
+      "handler": "CG_RequestAuthenticateCreateOK",
+      "parameter": "info",
+      "typeIndex": 41435,
+      "marshalWriteMatches": [
+        {
+          "writeToken": "0x600327a",
+          "readToken": "0x600327b",
+          "writeTypeIndex": 41435,
+          "readTypeIndex": 22608,
+          "pairOrdinalZeroBased": 195
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Tokens de métodos IL2CPP não são IDs RMI",
+    "TypeIndex não especifica layout serializado",
+    "Adjacência Write/Read não comprova chamada em runtime",
+    "Não foi produzido byte stream real do jogo"
+  ]
+}
