@@ -1,0 +1,3 @@
+# GrandCross Local — passos 1344–1346
+
+Recebidos e verificados os arquivos de GameAssembly e metadata. Ambos coincidem com os hashes da versão registrada anteriormente. No arquivo PE, os bytes dos quatro RVAs nativos diferem dos bytes obtidos em leitura do processo nos passos anteriores. Essa diferença impede usar diretamente o conteúdo desses RVAs em disco como se fosse o código carregado. A causa da diferença ainda não está identificada; não há prova de mecanismo específico de proteção. O metadata pode continuar sendo estudado separadamente do conteúdo transformado em execução. Nenhuma comunicação entre cliente e servidor local foi comprovada. Não foram publicados arquivos binários.
