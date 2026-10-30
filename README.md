@@ -1,5 +1,12 @@
 # ⚔️ Grand Cross Local — Adventure Log
 
+## 🏆 PASSOS 1048–1053 — Diretório de exceções IL2CPP (30/10/2026)
+
+**Último PASSO validado: 1053. Próximo: 1054 (não executado).** Descoberta importante: o PE da DLL atual aponta o diretório x64 de exceções para bytes que reconstruímos na `.vdata` (RVA `0x718602C`, `0x38E704` bytes). Foram validados **310.763 registros RUNTIME_FUNCTION**, ordenados e sem sobreposição; a entrada **28.899 delimita exatamente `il2cpp_init` (`0x344B60..0x344B88`)** e a seguinte delimita `il2cpp_init_utf16`. A DLL anterior continha **308.856 registros**, diferença de +1.907 na atual. Isto mapeia intervalos de funções, **não recupera os corpos nem demonstra sua execução**. **Objetivo 2: EM ANDAMENTO**. [PASSOS 1048–1052](./docs/PASSOS_1048_1052_EXCEPTION_IL2CPP.md) · [PASSO 1053 comparativo](./docs/PASSO_1053_COMPARATIVO_EXCEPTION.md). Nenhum servidor offline funcional.
+
+---
+
+
 ## 🔎 PASSOS 1041–1044 — Importações e IAT (30/10/2026)
 
 **Último passo auditado: 1044; próximo: 1045, ainda não executado.** As duas versões da GameAssembly.dll importam os mesmos **10 símbolos diretamente**, um por biblioteca. Entre eles, `GetModuleHandleA` e o símbolo de resolução `Baselib_DynamicLibrary_GetFunction` (o nome não prova chamada). A `.vdata` atual, reconstruída e validada por hash, contém **uma ocorrência literal** de RVA `0x06AE0260` no offset `.vdata+0xF189`, que corresponde à célula IAT de `GetModuleHandleA`, porém **sem evidência de uso efetivo**; os outros nove RVAs não tiveram coincidências literais nas duas representações varridas. **Objetivo 2 — inicialização IL2CPP completa: EM ANDAMENTO.** [Auditoria 1041–1043](./docs/PASSOS_1041_1043_IMPORTS_E_REFERENCIAS.md) · [Contexto 1044](./docs/PASSO_1044_CONTEXTO_IAT.md).
