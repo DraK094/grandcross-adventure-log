@@ -1,0 +1,3 @@
+# PASSO 1015 — consulta de módulos não localizou GameAssembly.dll
+
+Relato do PowerShell do usuário: processo `7dsgc` vivo no PID 1244, mas a enumeração `$p.Modules | Where-Object ModuleName -eq 'GameAssembly.dll'` não encontrou o módulo. Isso NÃO prova que o módulo não está na memória. Possibilidades: arquitetura do PowerShell, enumeração parcial, carga tardia, outro método de carregamento. Próximo PASSO 1016 pendente: verificar `[Environment]::Is64BitProcess` e `[Environment]::Is64BitOperatingSystem` e presença do processo. **Objetivo 2 permanece em andamento**. Nenhuma alteração de arquivos, nenhuma captura de memória nem bypass de proteção.
