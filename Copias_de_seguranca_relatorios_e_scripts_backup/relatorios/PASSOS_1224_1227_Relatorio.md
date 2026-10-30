@@ -1,0 +1,3 @@
+# GrandCross Local — PASSOS 1224–1227
+
+Revalidados SHA256 do GameAssembly e metadata atual e reconstruídos 14131200 bytes da .vdata (SHA256 72147fdd436f457250e117be65c722aaa1f52f48d3887092fb8e994934f09231). Foram consumidos 8042078 bytes na decodificação. A hipótese testada foi buscar a contagem 20548 dos MethodDefinitions de Assembly-CSharp-firstpass como inteiro literal alinhado em 32/64 bits. No PE bruto e .vdata reconstruída, excluindo tabela de exceções, os quatro testes encontraram zero ocorrências. A contagem de MethodDefinitions não está demonstrada como methodPointerCount; portanto ausência do literal não exclui CodeGenModule. Nenhum registro ou endereço nativo de Marshaler foi validado. Proximo passo 1228 ainda pendente.
