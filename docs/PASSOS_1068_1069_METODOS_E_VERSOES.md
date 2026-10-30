@@ -1,0 +1,7 @@
+# PASSOS 1068–1069 — Validação estrutural e comparação entre versões
+
+PASSO 1068 — Resultado fornecido pelo usuário no metadata instalado: IL2CPP 29, 34.488 tipos, 263.448 métodos. Nove classes analisadas, 0 inconsistências de `declaringType`: `PageLogin`, `ServerSelectPopup`, `ItemServerSelectButton`, `WestSidePacketManager`, `WestSidePacketHandler`, `WestSideProxy`, `WestSideInfo`, `NativeNetClient`, `NetConnectionParam`. Foram confirmados métodos como `PageLogin.OnClickServerSelect`, `PageLogin.GameServerConnect`, `WestSidePacketManager.ConnectToWestSideServer`, `WestSidePacketManager.OnPacketReceived`, `NativeNetClient.Connect`, `NetConnectionParam.set_serverIP` e `set_serverPort`.
+
+PASSO 1069 — Teste executado no ambiente do assistente na cópia antiga `global-metadata(1).dat`: IL2CPP 29, 34.451 tipos, 262.861 métodos. O parser validou 8 classes, respectivos intervalos e atribuições `MethodDefinition.declaringType`, sem inconsistências. Entre elas, `PageLogin` contém `OnSecurityTokenRes`, `OnSecurityCertValueByToken`, `OnNetmarbleAuthCompleted`, `OnUserLoginCompleted`, `GameServerConnect`, `GetWebServerURL`. Os nomes sugerem componentes da sequência de login, **não provam** ordem de execução, chamadas cruzadas ou funcionamento de um backend alternativo. Nenhum servidor local funcional demonstrado.
+
+Próximo PASSO 1070: documentar métodos, limites de inferência e priorizar análise estruturada das dependências; ainda não solicitar script do usuário.
