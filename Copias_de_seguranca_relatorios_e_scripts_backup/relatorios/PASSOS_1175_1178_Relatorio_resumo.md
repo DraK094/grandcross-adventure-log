@@ -1,0 +1,3 @@
+# GrandCross Local — PASSOS 1175–1178
+
+Estudo do metadata atual IL2CPP v29. LoginServiceInfo declara quatro campos: currentServerTime, maintenanceInfo, emergencyNoticeInfo, remainResetTimeSEC. WestSideUserInfo declara quinze campos, mas ainda não foi demonstrado que seja o tipo exato de userInfo do handler. CommonPacket.Marshaler: Write token 0x600328c e Read 0x600328d associados ao parâmetro userInfo; Write token 0x6003292 e Read 0x6003293 associados a loginServiceInfo. **NÃO foi determinada a ordem de serialização nem recuperado payload real**. O arquivo de evidências dessa rodada já foi salvo anteriormente em evidencias/PASSOS_1175_1178_Evidencias.json. Próximo passo no momento desse registro era 1179, já abordado em relatórios posteriores.
