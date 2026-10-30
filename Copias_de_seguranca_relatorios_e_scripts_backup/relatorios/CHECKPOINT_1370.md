@@ -1,0 +1,3 @@
+# GrandCross Local — checkpoint 1370
+
+Passo 1369: o usuario recuperou 128 bytes adicionais do codigo de RVA 0x4349B50, a partir do offset 0x60. Ha validacoes de ponteiros e campos numericos, alem de uma chamada indireta (`call r9`) precedida de leitura de campos nos offsets 0x268 e 0x270 de uma estrutura alcançada por ponteiro. Esses dados sao compativeis com despacho indireto, mas nao identificam a chamada como protocolo ou serializacao de rede. O servidor local segue sem conexao validada. Proximo passo: investigar por analise estatica o significado da chamada, antes de solicitar qualquer coleta adicional.
