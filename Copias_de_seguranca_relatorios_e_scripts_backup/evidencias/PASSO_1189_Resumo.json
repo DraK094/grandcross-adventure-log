@@ -1,0 +1,10 @@
+{
+  "step": 1189,
+  "test": "aligned QWORD=89 followed by in-image pointer candidate",
+  "hypothesisNotProven": "metadata images count may differ from codegen module count",
+  "qword89Matches": 0,
+  "codeRegistrationValidated": false,
+  "codeGenModuleValidated": false,
+  "methodRvasRecovered": 0,
+  "vdataSha256": "72147fdd436f457250e117be65c722aaa1f52f48d3887092fb8e994934f09231"
+}
