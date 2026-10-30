@@ -1,0 +1,25 @@
+{
+  "steps": [
+    1207,
+    1208,
+    1209,
+    1210,
+    1211,
+    1212
+  ],
+  "exceptionTable": {
+    "startRva": "0x718602c",
+    "endExclusiveRva": "0x7514730",
+    "entries": 310763,
+    "functionsStartingBeforeVdata": 310762,
+    "functionsStartingInsideVdata": 1
+  },
+  "vdataSha256": "72147fdd436f457250e117be65c722aaa1f52f48d3887092fb8e994934f09231",
+  "rvaLikeDwordWindows": [
+    "0x71e2000",
+    "0x72e2000",
+    "0x73e2000"
+  ],
+  "codeRegistrationValidated": false,
+  "marshalerRvasFound": 0
+}
