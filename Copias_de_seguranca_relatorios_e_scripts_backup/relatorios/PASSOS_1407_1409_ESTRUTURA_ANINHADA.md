@@ -1,0 +1,3 @@
+# GrandCross Local — passos 1407 a 1409
+
+Leituras reais: RVA 0x6DFA60 (128 bytes) e 0x6DFAE0 (128 bytes), PID 30012. A desmontagem foi alinhada a partir de 0x6DFA66 e considerou a instrução dividida em 0x6DFADF–0x6DFAE2. Após carregar a referência principal em +0xC0, código acessa [r13+0x10] como primeira coleção, calcula quantidade [r15+0x18] e percorre elementos via 0x3197350, encaminhando cada elemento para 0x6B8040. Posteriormente lê [r13+0x18] como segunda coleção, quantidade [r13+0x18], e processa elementos com leitura de dword em +0x10 e +0x14 (continuação do segundo processamento está cortada). Os campos são referências de coleções candidatas; nomes e formatos de rede não identificados. Sem comprovação de login no servidor local.
