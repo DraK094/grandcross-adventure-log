@@ -1,0 +1,3 @@
+# PASSO 1016 — Arquitetura PowerShell validada
+
+Resultado fornecido pelo usuário: `[Environment]::Is64BitProcess=True`, `[Environment]::Is64BitOperatingSystem=True`, processo `7dsgc`, PID 1244, StartTime 30/10/2026 00:47:55. Portanto não há incompatibilidade evidente de 32/64 bits entre PowerShell e Windows. A GameAssembly.dll ainda não foi identificada na enumeração anterior; não inferir ausência real na memória. **Próximo passo 1017 pendente:** consultar lista e contagem dos módulos do processo em PowerShell somente leitura, verificando erros e nomes sem acessar memória. Objetivo 2 continua EM ANDAMENTO.
