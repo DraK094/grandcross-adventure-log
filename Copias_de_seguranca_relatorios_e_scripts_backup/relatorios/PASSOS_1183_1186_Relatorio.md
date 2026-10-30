@@ -1,0 +1,5 @@
+# GrandCross Local — PASSOS 1183–1186
+
+Métodos `CommonPacket.Marshaler`: `Write(userInfo)` token `0x600328c` MethodDefinition **176145**; `Read(userInfo)` `0x600328d` **176146**; `Write(loginServiceInfo)` `0x6003292` **176151**; `Read(loginServiceInfo)` `0x6003293` **176152**. Todos declaram TypeDefinition 22867. Nenhuma dessas MethodDefinitions contém RVA nativo.
+
+Auditoria PE (GameAssembly atual hash `01761332ea33c2ff2c88b3fea8da924cd8482d7dfa86b5b02c1c1cb6f1660624`): ImageBase `0x180000000`, entryRVA `0x785c058`; `.vdata`: RVA `0x6ae2000`, virtualSize 14131200, rawSize 0, executável; `.boot`: RVA `0x785c000`, rawSize 8043008, executável. Export table: **384 entradas**, incluindo APIs `il2cpp_*`. Nenhum endereço nativo dos quatro marshalers recuperado. Nenhum ID RMI ou frame real decodificado. PASSO 1187 ainda não executado. Próximo foco: encontrar e validar vínculo CodeRegistration/CodeGenModule ↔ método, sem confundir metadata com código executável.
