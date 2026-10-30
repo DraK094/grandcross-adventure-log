@@ -1,0 +1,3 @@
+# GrandCross Local — passos 1376 a 1379
+
+O usuario enviou dois blocos de 128 bytes, offsets +0x100 e +0x180 da funcao em RVA 0x6DF460. A instrucao jl fragmentada entre os passos 1347 e 1376 foi completada; retorna ao laco anterior. O codigo atual acessa referencias nos offsets +0x40 e +0x48 de uma estrutura e consulta contagem em +0x18 das colecoes. Existe repeticao de acesso indexado e encaminhamento a funcoes auxiliares. A identidade concreta desses campos e o formato binario ainda nao estao estabelecidos; nenhum servidor local conectado foi validado. Proxima coleta direcionada: codigo a partir de RVA 0x6DF660.
