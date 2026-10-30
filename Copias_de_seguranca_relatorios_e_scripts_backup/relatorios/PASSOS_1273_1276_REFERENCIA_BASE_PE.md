@@ -1,0 +1,3 @@
+# GrandCross Local — Passos 1273 a 1276
+
+Amostra x64 da função RVA 0x42D378 enviada pelo usuário e decodificada com objdump. Instrução no RVA 0x42D397, `lea r14,[rip-0x42D39E]`, resolve exatamente à RVA 0, ou base PE carregada. No RVA 0x42D3A7 há consulta de tabela indexada `[r14+r15*8+0x6326F10]`, e no RVA 0x42D3AF leitura de dado no RVA 0x62FD648. Ambas na seção 3 e além de seus bytes brutos no PE. Amostra de dados adicional traz nomes de APIs Windows `AreFileApisANSI`, `CompareStringEx`, compatíveis com rotina de resolução de funções, mas sem provar identidade da rotina. Não há CodeGenModule, registro de método de login ou ID RMI validado. Resultados e script reproduzíveis na sessão.
