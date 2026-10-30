@@ -1,5 +1,16 @@
 # ⚔️ Grand Cross Local — Adventure Log
 
+## 🔬 STATUS ATUAL — PASSO 962 (29/10/2026)
+- **Último passo aprovado: 962. Próximo passo: 963 (não executado).** Trabalhos reproduzidos aqui com DLL enviada pelo usuário, sem modificá-la.
+- **PASSO 959:** reconstrução integral em Python puro de 14.131.200 bytes da seção `.vdata` (13,48 MiB) com marcador final, SHA256 `60c9b60dde83be7e274dd2a1355fe45bc1cce8a4cc31916a5c8759da66cc8ad3`. 100% **da cobertura de bytes da seção**, não do projeto/servidor.
+- **PASSOS 960–961:** destinos das duas CALLs antes fora de alcance decodificados. Sob o estado de pilha hipotético, a cadeia permite calcular a base da seção `.vdata` e a base PE, mas **a execução real não foi comprovada**.
+- **PASSO 962:** trampolins `0x6D91789 → 0x6ABF4B0 → 0x6DA5F72`, parada em `MOV RAX,RAX`, sem execução do destino.
+- Documentação: [957](./docs/BACKUP_TECNICO_PASSO_957.md) · [959](./docs/PASSO_959_RECONSTRUCAO_INTEGRAL.md) · [960](./docs/PASSO_960_CHAMADAS_RESOLVIDAS.md) · [961](./docs/PASSO_961_CALCULO_IMAGEBASE.md) · [962](./docs/PASSO_962_TRAMPOLINS.md).
+- **Sem CodeRegistration/MetadataRegistration validados, sem segundo estágio efetivamente executado e sem servidor offline funcional.**
+
+---
+
+
 ## 🛡️ ESTADO ATUAL — PASSO 957 APROVADO (29/10/2026)
 - **Último passo executado e validado: 957.** **PASSO 958 ainda não iniciado**; intervalo reservado para realizar backup e auditar o repositório.
 - **[BACKUP TÉCNICO DETALHADO DOS PASSOS 900–957](./docs/BACKUP_TECNICO_PASSO_957.md)** — endereços, hashes, descrição dos experimentos, mapas dos 16 destinos, 15 controles, 30 saídas, 15 convergências estáticas e instruções de retomada. Não inclui binários nem a coleção integral dos scripts/logs.
