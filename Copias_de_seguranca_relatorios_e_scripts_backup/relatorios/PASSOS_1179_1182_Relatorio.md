@@ -1,0 +1,3 @@
+# GrandCross Local — PASSOS 1179–1182
+
+Auditoria do metadata IL2CPP atual e do PE GameAssembly. Quatro métodos CommonPacket.Marshaler identificados com MethodDefinition índices: Write(userInfo) token 0x600328c índice 176145, Read(userInfo) 0x600328d índice 176146, Write(loginServiceInfo) 0x6003292 índice 176151, Read(loginServiceInfo) 0x6003293 índice 176152. Para os quatro: flags 0x96; implFlags 0x0. A seção .vdata apresenta virtualSize 14131200 e rawSize 0; .boot apresenta rawSize 8043008. Nenhum RVA nativo, sequência de bytes serializados ou ID RMI do jogo foi recuperado. Nenhum cliente oficial foi conectado ao servidor local. Próximo passo 1183: tentar resolver MethodDefinition -> RVA, sem suposições.
