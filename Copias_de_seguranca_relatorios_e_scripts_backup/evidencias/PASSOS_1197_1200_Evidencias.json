@@ -1,0 +1,16 @@
+{
+  "lastCompletedStep": 1200,
+  "entryRva": "0x785c058",
+  "entryFileOffset": 39251544,
+  "entrySection": ".boot",
+  "x64LiteralCopySequence": "8a 06 48 ff c6 88 07 48 ff c7",
+  "x64BackreferenceSequence": "48 29 c7 8a 07",
+  "tlsDirectoryRva": "0x6ae1018",
+  "tlsCallbacksVA": "0x0",
+  "vdataSHA256": "72147fdd436f457250e117be65c722aaa1f52f48d3887092fb8e994934f09231",
+  "codeRegistrationVerified": false,
+  "marshalerRvasVerified": 0,
+  "rmiIdsRecovered": 0,
+  "wireFramesRecovered": 0,
+  "officialClientLocalSession": false
+}
