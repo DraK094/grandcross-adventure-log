@@ -1,0 +1,3 @@
+# GrandCross Local — Passos 1347–1349
+
+O usuario forneceu 128 bytes adicionais da funcao candidata de indice 12939, RVA 0x6DF460, a partir do offset +0x80. Decodificacao das instrucoes a partir de RVA 0x6DF4E3 evidenciou leitura da contagem em [rbp+0x18], chamada a 0x4349580, loop com acesso a indice via 0x3197350 e chamada a 0x70DC50 por elemento. O ultimo byte lido em RVA 0x6DF55F e apenas o opcode 0x7C; seu deslocamento depende de leitura contigua posterior. A primeira instrucao do bloco tambem pode cruzar a fronteira anterior da amostra. A interpretacao como serializacao permanece hipotese; identificacao de protocolo e servidor local funcional nao confirmados.
