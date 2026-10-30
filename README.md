@@ -1,5 +1,16 @@
 # ⚔️ Grand Cross Local — Adventure Log
 
+## 🧪 STATUS MAIS RECENTE — PASSO 974 (29/10/2026)
+- **PASSOS 966–974 executados e auditados em Python nesta rodada**. Último aprovado: **974**. Próximo reservado: **975 (não executado)**.
+- Destino RVA `0x6D80A55`: `CALL +0`; depois instruções que manipulam a pilha e uma sequência `XOR EAX,EAX / LOCK CMPXCHG / JE / PAUSE / JMP` compatível com tentativa atômica repetida.
+- Novos controles `0x6D80E42`, `0x6D80FF6`, `0x6D81060`, `0x6D81492`, `0x6D81526`; reconvergências por **inspeção linear estática**, nunca execução real dos dois estados.
+- RVA `0x6D8161C`: `JMP QWORD PTR [RAX]`. Os ADD/SUB do trecho anterior cancelam-se, com contribuição `8×RBX` para RAX; **destino real não identificado**.
+- [Relatórios 966](./docs/PASSO_966_CALL_ZERO.md) · [967](./docs/PASSO_967_LOOP_ATOMICO.md) · [968](./docs/PASSO_968_CONDICAO_APOS_LOOP.md) · [969](./docs/PASSO_969_CONVERGENCIA.md) · [970](./docs/PASSO_970_RAMOS.md) · [971](./docs/PASSO_971_RECONVERGENCIA_SECUNDARIA.md) · [972](./docs/PASSO_972_DESPACHANTE_QWORD.md) · [973](./docs/PASSO_973_RAMO_RETORNO.md) · [974](./docs/PASSO_974_JMP_INDIRETO.md).
+- **Limites:** sem estado dinâmico real do cliente, segundo estágio real não confirmado, sem registros IL2CPP encontrados e **sem servidor offline funcional**. SHA256 da saída integral 13,48 MiB: `60c9b60dde83be7e274dd2a1355fe45bc1cce8a4cc31916a5c8759da66cc8ad3`.
+
+---
+
+
 ## 🔬 STATUS ATUAL — PASSO 962 (29/10/2026)
 - **Último passo aprovado: 962. Próximo passo: 963 (não executado).** Trabalhos reproduzidos aqui com DLL enviada pelo usuário, sem modificá-la.
 - **PASSO 959:** reconstrução integral em Python puro de 14.131.200 bytes da seção `.vdata` (13,48 MiB) com marcador final, SHA256 `60c9b60dde83be7e274dd2a1355fe45bc1cce8a4cc31916a5c8759da66cc8ad3`. 100% **da cobertura de bytes da seção**, não do projeto/servidor.
