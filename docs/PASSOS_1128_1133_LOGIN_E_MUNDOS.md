@@ -1,0 +1,7 @@
+# GrandCross Local PASSOS 1128–1133 — Login e seleção de mundo
+
+**1128:** Metadata atual IL2CPP 29: identificados tipos reais `PageLogin`, `Auth_PacketHandler`, `WorldInfo`, `WorldInfoManager`, `WestSidePacketManager`, `WestSideServerInfo`, `LoginServiceInfo` e um delegate de security token. **1129:** examinadas 30 assinaturas relevantes ao login/rede; `PageLogin.GameServerConnect(worldInfo)`, `Auth_PacketHandler.CG_RequestLoginOK(remote,rmiContext,userInfo,loginServiceInfo)`, `CG_RequestLoginInstantlyOK` e `WestSidePacketManager.ConnectToWestSideServer(ip,port)` declarados. **1130:** cinco testes locais de persistência SQLite do backend HTTP independente passaram. **1131:** ausência de compatibilidade com protocolo do jogo, handshake e sessão oficial.
+
+**1132:** leitura correta de campos IL2CPP confirmou `WorldInfo` com `m_name`, `m_worldId`, `m_region`, `m_ip`, `m_port`, `m_chatkitSetting`; `WorldInfoManager` com `m_selectWorldInfo`, `m_worldInfoList`, `m_dicRegionCode`. `LoginServiceInfo` tem `currentServerTime`, `maintenanceInfo`, `emergencyNoticeInfo`, `remainResetTimeSEC`.
+
+**1133:** nomes dos campos de `WorldInfo`, `WorldInfoManager`, `LoginServiceInfo`, `WestSideServerInfo` iguais entre os metadados antigo e atual. Existem configurações de mundo e endereço na estrutura, mas não está comprovada alteração autorizada de destino nem autenticação dispensável no cliente oficial. **Servidor Grand Cross jogável local: NÃO DEMONSTRADO.** Próximo 1134 não executado.
