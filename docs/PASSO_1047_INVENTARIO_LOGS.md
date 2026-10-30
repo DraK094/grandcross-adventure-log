@@ -1,0 +1,3 @@
+# PASSO 1047 — Inventário de logs locais
+
+Consulta somente leitura enviada pelo usuário na pasta LocalLow/Netmarble FNC/SevenDeadlySinsGlobal. Quatro arquivos de extensões log/txt: Player.log 1333 bytes última modificação 28/10/2026 02:32:08; Player-prev.log 67962 bytes 22/12/2025 21:32:08; InstalledProcessNames.txt 34 bytes 05/11/2023 16:57:41; GameInstalledPath.txt 64 bytes 05/11/2023 16:57:41. Nenhum modificado durante testes de 30/10/2026. Conclusão limitada à pasta consultada: não há log recente identificado. Não inferir ausência global de logs nem inicialização IL2CPP concluída. Objetivo 2 permanece EM ANDAMENTO. Próximo passo 1048: investigação estática de código com DLL e metadados fornecidos, sem coleta de credenciais ou contorno de proteção.
