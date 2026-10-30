@@ -1,0 +1,4 @@
+PASSO 1179: índices nativos candidatos 176145 176146 176151 176152
+PASSO 1180: flags=0x96 implFlags=0x0 para os quatro
+PASSO 1181: PE .vdata virtual=14131200 raw=0; .boot raw=8043008
+PASSO 1182: RVA validado=0, IDs RMI recuperados=0, payloads validados=0
