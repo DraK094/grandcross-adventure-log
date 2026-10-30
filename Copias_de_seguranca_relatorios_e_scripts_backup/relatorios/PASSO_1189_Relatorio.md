@@ -1,0 +1,3 @@
+# PASSO 1189 — busca heurística de CodeRegistration
+
+Hash do GameAssembly atual e metadata atual verificados; .vdata reconstruída com 14131200 bytes (SHA256 `72147fdd436f457250e117be65c722aaa1f52f48d3887092fb8e994934f09231`). Percorridas seções PE brutas e `.vdata` com sondagem alinhada a 8 bytes para **QWORD 89** (quantidade de imagens no metadata), seguida de ponteiro dentro da imagem PE. **Zero ocorrências**. A contagem 89 NÃO foi demonstrada como sendo a contagem de CodeGenModule; a sondagem não representa busca exaustiva nem demonstra ausência de `Il2CppCodeRegistration`. Nenhum CodeGenModule/CodeRegistration/RVA dos serializadores foi validado. Próximo PASSO 1190: localizar uma âncora estrutural do fluxo de registro real.
