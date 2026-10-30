@@ -1,0 +1,3 @@
+# GrandCross Local — checkpoint 1380
+
+Os bytes coletados ate o passo 1376 sustentam que o candidato nativo de indice 12939 processa mais de uma colecao. Foram observadas referencias em offsets +0x40 e +0x48 e leitura de contagem em +0x18. Foi concluida uma instrucao de salto dividida entre coletas anteriores. Os nomes semanticos dos campos, os bytes de serializacao e o protocolo de login permanecem nao comprovados. Nao ha conexao de cliente ao backend local. Passo 1380 e auditoria documental, nao teste de execucao. Proximo alvo: continuacao do codigo em RVA 0x6DF660, se houver autorizacao de leitura.
