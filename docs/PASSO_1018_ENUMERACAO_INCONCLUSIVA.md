@@ -1,0 +1,3 @@
+# PASSO 1018 — Enumeração de módulos inconclusiva
+
+Saída fornecida pelo usuário: o processo `7dsgc` PID 1244 foi identificado, porém `$p.Modules | Select-Object ModuleName,FileName,BaseAddress,ModuleMemorySize | Format-List` não exibiu registros nem erro. O PASSO 1017 havia retornado contagem 1, mas nenhum nome compatível com GameAssembly/Unity. **Não interpretar como prova de nenhum módulo carregado**, nem afirmar que uma proteção específica causou o resultado. Próximo PASSO 1019: consulta informativa `Get-CimInstance Win32_Process` para identidade, criação e thread count, sem leitura da memória, injeção ou contorno de segurança. Objetivo 2 continua EM ANDAMENTO.
