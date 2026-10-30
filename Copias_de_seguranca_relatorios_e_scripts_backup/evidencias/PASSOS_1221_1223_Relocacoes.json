@@ -1,0 +1,13 @@
+{
+  "relocRva": "0x8008000",
+  "size": 16,
+  "page": "0x6ae1000",
+  "dir64Offsets": [
+    "0x18",
+    "0x20",
+    "0x28"
+  ],
+  "metadataImages": 89,
+  "firstpassImageIndex": 1,
+  "codeGenModuleVerified": false
+}
