@@ -2,6 +2,10 @@
 
 ## 🏆 MARCO 1000 — 30/10/2026
 
+📊 **[Relatório especial PASSO 1000 — comparação 800/900/957/959/1000, conquistas e progresso real](./docs/RELATORIO_ESPECIAL_PASSO_1000.md)**
+
+
+
 **Último passo validado: 1000 (checkpoint); próximo: 1001.** Passos 975–999: 25 asserções estáticas de bytes e instruções sobre a `.vdata` reconstruída (14.131.200 bytes, SHA256 `60c9b60dde83be7e274dd2a1355fe45bc1cce8a4cc31916a5c8759da66cc8ad3`). Observado laço que opera em QWORDs sucessivos e `JMP QWORD PTR [RAX]`; **destino dinâmico desconhecido**. Não há execução do segundo estágio nem servidor offline funcional comprovado. **100% refere-se apenas à reconstrução dos bytes virtuais da seção.**
 
 **[Relatório formal e evidências PASSO 1000](./docs/CHECKPOINT_1000.md)**.
