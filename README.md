@@ -1,5 +1,12 @@
 # ⚔️ Grand Cross Local — Adventure Log
 
+## 🧩 Metadados recebidos — PASSOS 1007–1009
+
+Cópia `global-metadata.dat` (31.786.920 bytes) validada: assinatura IL2CPP v29, 31 regiões do cabeçalho coerentes, **34.451 definições de tipos, 89 imagens e 89 assemblies**; primeira imagem `Assembly-CSharp.dll` com 20.065 tipos. **Objetivo 2 permanece EM ANDAMENTO**: ainda faltam os registros nativos e comprovação da cadeia de inicialização. [Auditoria 1007–1009](./docs/PASSOS_1007_1009_AUDITORIA_METADATA.md). Próximo: PASSO 1010.
+
+---
+
+
 ## 🧬 OBJETIVO 2 — INICIALIZAÇÃO DO CÓDIGO RECONSTRUÍDO (PASSO 1006)
 
 **Status: EM ANDAMENTO** (não marcar como concluído sem comprovar o caminho completo de inicialização e handoff ao runtime IL2CPP). Passos 1001–1006 aprovados em auditorias estáticas com a DLL original: contador exato **1652** no laço RVA `0x6D81523`, mesmo laço estudado no passo 942; `.boot` calcula base `.vdata` e prepara `JMP RAX` para `.vdata+0x1CC32` após verificar/carregar a seção. Ainda faltam estados dinâmicos, resolução de despachos indiretos e prova de inicialização do IL2CPP.
