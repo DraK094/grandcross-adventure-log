@@ -1,4 +1,7 @@
 # LEIA PRIMEIRO — GRANDCROSS LOCAL
+
+> **ATUALIZAÇÃO 30/10/2026 — LEIA ANTES DAS NOTAS HISTÓRICAS ABAIXO:** o manual antigo parou em 1174, mas o histórico foi recuperado até o **PASSO 1288** (auditoria documental); **1289 está preparado, não executado**. O backend do laboratório ainda não está conectado ao cliente. Consulte [checkpoint recuperado](Copias_de_seguranca_relatorios_e_scripts_backup/relatorios/CHECKPOINT_RECUPERACAO_1175_1288_2026-10-30.md) e [política de backup a cada 10 passos](Copias_de_seguranca_relatorios_e_scripts_backup/relatorios/POLITICA_BACKUP_CADA_10_PASSOS.md). **Próximo marco: 1290 concluído.** Não retomar do 1175. Os marcos só são publicados quando concluídos, e cada commit deve ser confirmado.
+
 **Manual de continuidade entre chats — 30/10/2026.**
 
 > O projeto já tem **1174 passos concluídos**. **PASSO 1175 AINDA NÃO EXECUTADO.** Não é um projeto novo. Antes de anunciar descoberta, execute teste real e preserve evidências.
