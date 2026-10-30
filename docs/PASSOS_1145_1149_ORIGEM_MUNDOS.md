@@ -1,0 +1,5 @@
+# GrandCross Local - Passos 1145 a 1149
+
+Analise no metadata IL2CPP atual, sem alterar o cliente. 1145 confirmou WorldInfoManager com m_worldInfoList, m_selectWorldInfo, AddWorldInfo e SetMyWorldInfo. WorldInfo declara IP, porta, regiao e ID. 1146 inventariou tipos relacionados a mundo/selecao; nao identificou origem inequivoca da lista. 1147 confirmou referencias textuais WEB_SERVER_URL_REAL, WEB_SERVER_URL_DEV e CheckConfiguration, sem obter URLs efetivas. 1148 comparou cinco classes entre os metadados anterior e atual: campos e metodos nominais preservados. 1149 validou em mock Python proprio duas operacoes sobre uma lista artificial (adicionar terceiro ou substituir entrada), mas **nao no cliente oficial**.
+
+Conclusao: as duas estrategias continuam hipoteses. O cliente nao foi redirecionado nem conectado a servidor local, e nenhuma compatibilidade de login/ProudNet/RMI foi demonstrada. Proxima necessidade e observar de onde a lista real de mundos e obtida por meios nao invasivos. Nenhum arquivo do jogo publicado.
