@@ -1,0 +1,3 @@
+# GrandCross Local — passos 1472-1475
+
+Leitura validada: West C2S em RVA 0x5FB7908 contem 0x2000E099; West S2C em RVA 0x5FB7AC8 contem 0x2000E09B. Sao tokens de metadata IL2CPP codificados, com bit 0 = 1 indicando referencia ainda nao resolvida. Topo 0x20000000 indica TypeInfo, e indice de origem deslocado uma casa apos descartar bits de tipo e inicializacao: 0x704C (28748) e 0x704D (28749). NAO SAO IDs RMI. Nao dereferenciar como ponteiro e nao chamar inicializadores sem uma justificativa. Evidencia adicional: codigo-fonte publico IL2CPP GlobalMetadata.h e Il2CppInspector MetadataUsage.cs. Proximo alvo: relacao dos indices de tipos no metadata e classes SevenDSWest.
