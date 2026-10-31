@@ -1,3 +1,15 @@
+# 🛡️ ATUALIZAÇÃO OFICIAL — REUNIÃO PASSO 2080 (31/10/2026)
+
+**Último passo executado e com resultado recebido: 2080. PASSO 2081 entregue, pendente de execução.** Retomada documentada; nenhum servidor local jogável ou autenticação local validada. A atualização de commits anteriores cobria 2013–2016; a revisão registra evidências 2061–2080 e marca 2017–2060 como lacuna documental a recuperar, sem fabricar logs.
+
+📚 **[GUIA DE RETOMADA 2080](./docs/GUIA_RETOMADA_2080.md)** · **[RELATÓRIO DA REUNIÃO E COMPARATIVO](./docs/RELATORIO_REUNIAO_2080.md)** · **[DIÁRIO TÉCNICO 2061–2080](./docs/DIARIO_2017_2080.md)** · [Checkpoint estruturado](./checkpoints/PASSO_2080.json)
+
+**Conquistas verificadas (cliente, NÃO servidor):** cadeia isShowWebShopBuy → PackageItemManager.IsShowWebBuy; battleEncounter → State.m_battleEncounter; iteração userPackageMissionInfoList → processador 0x1C16C20. Chamada 0x3612580 é despacho indireto com destino não identificado. Próxima coleta: verificar State+0x1D8 no PASSO 2081.
+
+**Progresso:** percentuais 600/700/800/900 no histórico são estimativas subjetivas de conhecimento técnico. Não existe percentual global auditado no checkpoint 2000; não converter quantidade de passos em porcentagem de servidor. Back-end funcional: **não demonstrado**.
+
+---
+
 # ⚔️ Grand Cross Local — Adventure Log
 
 ## 🏆 PASSOS 1048–1053 — Diretório de exceções IL2CPP (30/10/2026)
