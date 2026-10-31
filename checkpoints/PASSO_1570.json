@@ -1,0 +1,14 @@
+{
+  "step": 1570,
+  "c2s_login_overloads": [
+    "0x06003F0E",
+    "0x06003F0F"
+  ],
+  "s2c_login_stub": "0x06000777",
+  "runtime_numeric_values": {
+    "c2s_29": 10055,
+    "s2c_32": 14055
+  },
+  "mapping_verified_independently": false,
+  "backend_login": false
+}
