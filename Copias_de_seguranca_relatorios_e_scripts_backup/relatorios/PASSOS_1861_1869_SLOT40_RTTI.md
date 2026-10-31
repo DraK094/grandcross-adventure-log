@@ -1,0 +1,5 @@
+# PASSOS 1861-1869
+
+Foi inspecionado estaticamente o PE x64 ProudNetClient.dll. Em RmiSend RVA 0x17D2D o codigo lê `rcx=[r15+8]`, depois `rax=[rcx]` e em 0x17D52 executa `call qword [rax+0x40]`. Isso confirma que a chamada usa a vtable do objeto guardado em +8 de r15, cujo tipo de runtime ainda nao foi identificado.
+
+Varredura de .rdata identificou 93 vtables com MSVC RTTI cujo slot +0x40 aponta para codigo no PE. Exemplos: CNetClient vtable 0x117830 -> 0x14EE0; CNetClientImpl vtables 0x117EB8 -> 0x5FAB0, 0x118070 -> 0x46E28 e 0x1180A0 -> 0x5FD94; C2SProxy vtable 0x117C10 -> 0x554A0; CRemoteServer_C vtable 0x120B98 -> 0x9B510. A existencia de varios slots impossibilita inferir a implementacao concreta a partir do offset ou do nome isoladamente. A biblioteca PE completa foi verificada por SHA256 no script de varredura gerado offline. Proximas evidencias necessarias: identificacao da criacao e atribuicao do objeto [r15+8] ou leitura controlada de ponteiros em runtime. Nao ha prova de wire framing nem login local funcional.
