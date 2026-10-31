@@ -1,0 +1,3 @@
+# Checkpoint 1950: buffer de mensagem ProudNet
+
+Evidência de acesso aos buffers de mensagens RECEBIDAS: GetMsgBuffer RVA 0x9880 retorna ponteiro direto ou compartilhado, GetMsgBufferLength RVA 0x98D0 lê comprimento, GetMsgReadOffset RVA 0x9910 executa shift 3 sobre valor interno; tipo do argumento deste último ainda precisa de confirmação. Metadata IL2CPP confirma wrappers gerenciados GetMsgBuffer 0x06000126, GetMsgBufferLength 0x06000127, GetMsgReadOffset 0x06000128 e RmiStub.ProcessReceivedMessage 0x06000117. Setter do callback nativo da RmiStub RVA 0x9C20 grava em campo +0x38. Foi realizado teste com dados sintéticos; NÃO capturado tráfego real ou implementado login local. Pacote local: grandcross_checkpoint_1950_buffers.zip.
