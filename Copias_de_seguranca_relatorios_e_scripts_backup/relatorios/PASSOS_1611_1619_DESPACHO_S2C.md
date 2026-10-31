@@ -1,0 +1,3 @@
+# Passos 1611-1619
+
+PASSO 1611: GameAssembly PID 30012; metodo S2C.Stub.ProcessReceivedMessage token 0x06000756 aponta RVA 0x917840. Desmontagem dos 192 bytes do inicio: `call 0x43490B0` extrai identificador em `[rsp+0x68]`; carrega esse identificador em R8D em RVA 0x9178A9; `cmp r8d,0x382A` (14378) em 0x9178AE, `jle 0x91A927` em RVA 0x9178B5. ID candidato de CG_RequestLoginOK e 14055 (0x36E7), que satisfaz 14055 <= 14378. Portanto, para esse ID, o fluxo segue a rota de RVA 0x91A927, e nao a jump table mostrada logo depois, que atende IDs maiores. Rota e inferida condicionalmente ao parser entregar 14055. Pendente examinar codigo em 0x91A927 e confirmar chamada do metodo especifico da resposta. Nao implica autenticação local nem formato de transporte conhecido.
