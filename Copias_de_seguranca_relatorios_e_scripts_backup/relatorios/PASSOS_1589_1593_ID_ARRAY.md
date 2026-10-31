@@ -1,0 +1,3 @@
+# GrandCross Local — PASSOS 1589–1593
+
+Leitura do usuário no GameAssembly carregado: RVA 0x41FA5F0 contém `movzx ebx,cx`, `mov edx,2`, `call 0x3BEA30` e `mov word ptr [rax+0x20],bx`, com checagens de ponteiro e comprimento. Com o ID 10055 (0x2747) da função CG_RequestLogin, a rotina cria um array gerenciado de 2 bytes e grava 47 27 (little-endian) em seu início. Isso comprova a representação interna do identificador, NÃO o wire format completo da mensagem nem um pacote enviado. RVA 0x3DE81E0 examinado até +0x80: inclui checagens de objeto e comprimento, leitura de offsets +0x18 e processamento adicional incompleto. Ainda não foi demonstrado transporte ProudNet nem servidor compatível.
