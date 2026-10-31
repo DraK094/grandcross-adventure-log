@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-31",
+  "last_executed_step": 2080,
+  "next_step_prepared": 2081,
+  "next_step_executed": false,
+  "covered_with_details": "2061-2080",
+  "documentary_gap": "2017-2060",
+  "metadata_registration_rva": "0x57E33E0",
+  "login_callback_rva": "0x29F5200",
+  "last_traced_wrapper_rva": "0x3612580",
+  "local_login_working": false,
+  "proudnet_handshake_validated": false,
+  "offline_game_playable": false
+}
