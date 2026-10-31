@@ -1,3 +1,9 @@
+## ✅ PASSO 2081 — DICIONÁRIO DE MISSÕES VALIDADO (31/10/2026)
+
+**Último passo executado e validado: 2081. Próximo passo 2082 NÃO emitido: reunião técnica em andamento.** State.m_dicPackageMissionData em +0x1D8 aponta para um objeto System.Collections.Generic.Dictionary`2, com layout básico verificado. Chave/valor concretos e escrita dinâmica ainda não confirmados. [Relatório 2081](./docs/PASSO_2081_DICIONARIO_MISSOES.md). Nenhum servidor local funcional comprovado.
+
+---
+
 # 🛡️ ATUALIZAÇÃO OFICIAL — REUNIÃO PASSO 2080 (31/10/2026)
 
 **Último passo executado e com resultado recebido: 2080. PASSO 2081 entregue, pendente de execução.** Retomada documentada; nenhum servidor local jogável ou autenticação local validada. A atualização de commits anteriores cobria 2013–2016; a revisão registra evidências 2061–2080 e marca 2017–2060 como lacuna documental a recuperar, sem fabricar logs.
