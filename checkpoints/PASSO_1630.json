@@ -1,0 +1,16 @@
+{
+  "step": 1630,
+  "c2s_login": {
+    "id": 10055,
+    "verified": true
+  },
+  "s2c_login_ok": {
+    "id": 14055,
+    "dispatcher_rva": "0x91AD61",
+    "call_rva": "0x91AD76",
+    "handler_rva": "0x8EFD00",
+    "verified": true
+  },
+  "wire_format_verified": false,
+  "local_login_verified": false
+}
