@@ -1,7 +1,7 @@
 {
   "date": "2026-10-31",
-  "last_executed_step": 2080,
-  "next_step_prepared": 2081,
+  "last_executed_step": 2081,
+  "next_step_prepared": null,
   "next_step_executed": false,
   "covered_with_details": "2061-2080",
   "documentary_gap": "2017-2060",
@@ -10,5 +10,8 @@
   "last_traced_wrapper_rva": "0x3612580",
   "local_login_working": false,
   "proudnet_handshake_validated": false,
-  "offline_game_playable": false
+  "offline_game_playable": false,
+  "next_step": "2082: not yet issued; meeting in progress",
+  "latest_report": "docs/PASSO_2081_DICIONARIO_MISSOES.md",
+  "state_package_mission_dictionary_confirmed": true
 }
