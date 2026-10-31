@@ -1,0 +1,3 @@
+# GrandCross Local — passos 1447 a 1449
+
+O usuario leu os contextos ASCII de ProudNetClientPlugin.dll, com quatro ocorrencias de GetRmiIDList e duas de GetRmiIDListCount. Os nomes completos mostram CSharp_RmiProxy_SetCallbackGetRmiIDList, CSharp_RmiProxy_SetCallbackGetRmiIDListCount, CSharp_RmiStub_SetCallbackGetRmiIDList e CSharp_RmiStub_SetCallbackGetRmiIDListCount. A evidencia indica interface nativa para registrar callbacks, nao os IDs RMI numericos do login. Proxima pergunta: onde o IL2CPP registra callbacks especificos de proxy/stub e de onde vem sua tabela de IDs. Nao houve handshake nem login local validado.
