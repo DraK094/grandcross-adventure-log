@@ -1,0 +1,3 @@
+# GrandCross Local — passos 1436–1439
+
+Inventario offline do metadata v29, SHA256 eea7a31712bfca44caaa85cee3874ae9092a035556fcdef10f6c6a1fe156448b. Busca exata identificou CG_RequestLoginOK (9 ocorrencias), GetRmiIDList (10), GetRmiIDListCount (5), RmiProxy (7), RmiStub (7), AttachProxy (2) e AttachStub (2). Trata-se de contagem de bytes/string, nao de referencias validadas. A documentacao ProudNet confirma que stubs e proxies gerados por PIDL disponibilizam GetRmiIDList; nenhum ID RMI numerico de login foi demonstrado. Proxima prioridade: localizar tabela gerada e validar associacao ID-nome, sem presumir equivalencia com tokens IL2CPP.
