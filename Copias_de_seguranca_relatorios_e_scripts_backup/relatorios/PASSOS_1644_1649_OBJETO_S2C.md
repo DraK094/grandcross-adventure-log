@@ -1,0 +1,3 @@
+# Passos 1644-1649
+
+Bytes do handler S2C RVA 0x8EFF10 (192 bytes), desmontados x64. `mov dword ptr [rbx+0x10],0x36E7` define 14055. A funcao preenche campos objeto nos offsets +0x18 (referencia), +0x20 (R14D) e +0x28 (RBP); `call 0x3BE9A0` aparece duas vezes, possivelmente barreira de escrita gerenciada (a semantica nao e provada). Obtem callback em [RDI+0x40], passa RDX=RBX (objeto) e executa chamada indireta via [RAX+0x18] no RVA 0x8EFF64. Depois acessa [RDI+0x148] e chama R10 vindo de [RCX+0x18], em RVA 0x8EFFBC; o retorno AL e testado para desvio, sem prova de que isso seja resultado de login. A amostra termina em 0x8EFFD0; restante desconhecido. Nao foi demonstrado formato wire ou servidor local funcional.
