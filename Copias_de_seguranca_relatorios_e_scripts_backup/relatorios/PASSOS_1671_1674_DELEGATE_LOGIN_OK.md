@@ -1,0 +1,3 @@
+# GrandCross Local — PASSOS 1671–1674
+
+Da tabela TypeDefinitions IL2CPP: TypeDefinitionIndex 20623, `CG_RequestLoginOKDelegate`, MethodDefinition `Invoke` token 0x06000A4E, possui quatro argumentos: `remote` (type index 0x8936), `rmiContext` (0xAD55), `userInfo` (0x9CD8) e `loginServiceInfo` (0x9CD4). Essa e a assinatura do callback de login OK, e nao necessariamente a representacao wire. TypeDefinitionIndex 20624, `CG_RequestLoginInstantlyOKDelegate`, `Invoke` token 0x06000A52, recebe `remote`, `rmiContext`, `sendDailyReset`, `sessionKey` e `loginServiceInfo`. O metodo Proxy CG_RequestLogin envia 11 argumentos, documentado em PASSOS_1661_1669_ASSINATURAS_LOGIN.md. Nao atribuir estruturas de bytes sem decodificar os tipos e seu serializador. Sem login local funcional.
