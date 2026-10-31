@@ -1,0 +1,3 @@
+# Checkpoint 1880
+
+As 93 vtables RTTI candidatas do slot +0x40 foram auditadas estaticamente. Em RmiSend, o objeto concreto é lido por [r15+8] e a chamada virtual ocorre em 0x17D52. Classes CNetClient e CNetClientImpl apresentam destinos diferentes no mesmo slot. Identidade do objeto concreto ainda nao verificada, logo nao pode ser anunciado transporte confirmado. Proximo ponto de maior valor: evidencia da alocacao/atribuicao do contexto ou leitura controlada do seu vptr no momento do envio. Dados auditaveis no script gc_proud_vtable_slot40_1861.py e JSON grandcross_slot40_1861.json. Sem servidor local funcional.
