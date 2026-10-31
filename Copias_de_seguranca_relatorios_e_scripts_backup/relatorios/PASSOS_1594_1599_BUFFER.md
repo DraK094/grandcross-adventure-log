@@ -1,0 +1,3 @@
+# Passos 1594–1599
+
+Leitura de código usuário: RVA 0x3DE8250 continua a função 0x3DE81E0 e termina com ret em 0x3DE82A0. `mov edx,[rdi+0x18]; mov ebx,[rsi+0x18]; add edx,ebx; call 0x3DE8F20` em 0x3DE8266, depois chamada 0x4243260 em 0x3DE8287 com referências e comprimentos. O padrão é compatível com assegurar capacidade de destino e copiar/acrescentar bytes de origem, porém a semântica final das duas funções ainda não foi demonstrada. Bytes depois de ret pertencem a outro caminho ou função e não são continuação linear. Próxima leitura focal: RVA 0x4243260. Isto não prova formato de transporte ProudNet.
