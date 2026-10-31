@@ -1,0 +1,5 @@
+# PASSO 2093 — Nome exato do módulo ProudNet
+
+Resultado somente leitura de `global-metadata.dat` IL2CPP v29. String heap base 0x0017B264. Uma ocorrência de string **completa** `ProudNetClientPlugin`: índice relativo 0x00559320, offset absoluto 0x006D4584. Não houve ocorrência exata de `ProudNetClientPlugin.dll`, `ProudNetClient` ou `ProudNetClient.dll` entre os quatro alvos no heap. Nenhum arquivo, memória ou rede modificados.
+
+**Limite:** mera presença no heap NÃO confirma ModuleRef nem `EntryPoint`. Próximo passo recomendado: leitura estruturada de `windowsRuntimeTypeNames`? **Não**: primeiro consultar o layout real da tabela `windowsRuntime`/`unresolvedVirtualCallParameterRanges` e, especificamente, `Il2CppImageDefinition` + `Il2CppMetadataUsage`; para P/Invoke o nome do módulo pode ser registrado em `Il2CppCodeRegistration`/`Il2CppInteropData`, evitando suposições sobre cabeçalho. No curto prazo, procurar referência inteira `0x00559320` nas tabelas metadata com contagem e offsets, classificando como pista e não confirmação. Progresso de backend continua 0 sessões locais demonstradas.
