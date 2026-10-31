@@ -1,0 +1,13 @@
+{
+  "step": 1440,
+  "status": "completed_documental",
+  "report": "Copias_de_seguranca_relatorios_e_scripts_backup/relatorios/CHECKPOINT_1440_RMI_NAMES.md",
+  "validated": [
+    "RmiName_CG_RequestLoginOK metadata offset 0x518F25",
+    "RmiName_CG_RequestNetmarbleAuthOK metadata offset 0x518EAF"
+  ],
+  "not_validated": [
+    "IDs RMI numericos",
+    "conexao do cliente a backend local"
+  ]
+}
