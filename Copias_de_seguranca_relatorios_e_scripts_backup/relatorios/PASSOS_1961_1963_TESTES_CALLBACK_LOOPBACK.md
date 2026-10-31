@@ -1,0 +1,9 @@
+# GrandCross Local — passos 1961–1963
+
+Análise estática e testes sintéticos. PASSO 1961: `ProudNetClientPlugin.dll` constrói wrapper `NativeToRmiStubWrap` com 64 bytes (alocação RVA 0x9B36), zera o bloco de 0x40, inicializa handle em +0x28 e callback em +0x38 como NULL; setter `CSharp_RmiStub_SetCallbackProcessReceivedMessage` RVA 0x9C20 grava callback; vtable RVA 0x100F8 aponta thunk RVA 0x1400 que entrega o handle ao callback. Dez checks de instruções aprovados. IL2CPP metadata MethodDefinitionIndex 257727, `RmiStub.ProcessReceivedMessage(pa,hostTag)`, token 0x06000117. O método gerenciado NÃO foi recuperado.
+
+PASSO 1962: criado e EXECUTADO smoke test TCP de loopback 127.0.0.1 com framing sintético próprio `GCLAB1`, 4 bytes comprimento little-endian, corpo `hello-local-rmi`; servidor respondeu `LAB_ACK`; teste passou. Esse protocolo de laboratório não é ProudNet, não comunica com o jogo e não permite login real. Código `gc_loopback_1962.py`, resultado `grandcross_loopback_1962.json`.
+
+PASSO 1963: metadata confirma campos gerenciados `RmiStub.m_native_Internal`, `m_core`, duas flags de notificação/profiling e getters de lista/quantidade de IDs; `NativeReceivedMessage` possui `swigCPtr`/`swigCMemOwn` (wrapper SWIG). Esses campos de metadata não identificam offsets concretos em runtime, framing wire, ponteiro de callback em memória ou estrutura de login. `GameAssembly(4).dll` em disco não contém literais `ProudDotNetClientUnity`, `ProcessReceivedMessage` nem `il2cpp_codegen_register` com busca simples; ausência de strings NÃO prova ausência de corpo compilado. O corpo gerenciado em runtime continua dependência pendente.
+
+Nenhum login local funcional. Próxima etapa de alta confiança: mapear ponteiros de registro do módulo IL2CPP próprio de ProudDotNetClientUnity.dll por evidência de registro, ou teste local com callback sintético isolado. Não envolver servidores oficiais nem credenciais.
