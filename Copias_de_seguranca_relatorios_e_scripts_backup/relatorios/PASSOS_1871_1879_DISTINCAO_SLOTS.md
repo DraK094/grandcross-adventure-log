@@ -1,0 +1,3 @@
+# Passos 1871-1879 — vtables candidatas do contexto
+
+Partindo do RmiSend RVA 0x17930, a chamada em RVA 0x17D52 usa `rcx=[r15+8]`, `rax=[rcx]`, `call [rax+0x40]`. Enumeradas 93 vtables RTTI no slot +0x40 em ProudNetClient.dll. Destinos de candidatos selecionados: CNetClient vtable RVA 0x117830 -> RVA 0x14EE0; CNetClientImpl RVA 0x117EB8 -> RVA 0x5FAB0, RVA 0x118070 -> RVA 0x46E28, RVA 0x1180A0 -> RVA 0x5FD94; C2SProxy RVA 0x117C10 -> RVA 0x554A0. As rotinas têm prologos e comportamentos diferentes, logo nem o nome da classe nem o offset isolado determina o destino live. Não foi encontrado objeto live ou vtable atribuida a [r15+8]. Progresso é mapeamento estrutural, não wire format.
