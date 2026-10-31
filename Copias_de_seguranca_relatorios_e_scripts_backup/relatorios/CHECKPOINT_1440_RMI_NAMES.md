@@ -1,0 +1,3 @@
+# GrandCross Local — checkpoint 1440
+
+Analise offline verificou no metadata v29 as strings exatas RmiName_CG_RequestLoginOK no offset 0x518F25 e RmiName_CG_RequestNetmarbleAuthOK em 0x518EAF. Ambas integram uma sequencia de nomes RmiName de operacoes do jogo, forte indicio de tabela/simbolos gerados para RMI. Os nomes por si so nao demonstram IDs numericos nem registros de runtime. Segundo a documentacao ProudNet, proxies/stubs oferecem GetRmiIDList/GetRmiIDListCount; localizar a implementacao concreta e o proximo alvo. Nenhum handshake ou login local validado. Auditoria: preservar a separacao entre identificacao de metodos e funcionalidade do servidor.
