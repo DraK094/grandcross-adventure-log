@@ -1,0 +1,3 @@
+# Checkpoint 1510
+
+No PASSO 1506, o salto de 0x367780 vai a 0x3F98C0. A rotina 0x36E690 tem padrão compatível com alocacao de array gerenciado, com tamanho dependente do elemento, mas sem identificação de lista RMI ou conteúdo numérico. Em auditoria offline adicional, classes Common West C2S e S2C têm 2 campos cada, todos com typeIndex 0xAD5C. Nomes: C2S CW_RequestJoinChannel/CW_RequestWestSideMove, S2C CW_CommonCancel/CW_RequestForceLogoutOK. Isso sugere que o objeto estático e as listas reais podem pertencer a etapas distintas: não equiparar os arrays de tamanho 6/14 aos IDs de login sem observar conteúdo. Sem IDs RMI ou comunicação local.
