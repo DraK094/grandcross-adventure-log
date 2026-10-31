@@ -1,3 +1,5 @@
+> ATUALIZAÇÃO 31/10/2026: **PASSO 2081 executado e validado**, substituindo o estado anterior de pendente. State.m_dicPackageMissionData, offset 0x1D8, aponta Dictionary`2. [Nota técnica 2081](./PASSO_2081_DICIONARIO_MISSOES.md). A reunião de consolidação continua; **PASSO 2082 ainda não emitido**. Os trechos históricos abaixo descrevem o snapshot anterior da pausa 2080 e não representam o estado atual.
+
 # GUIA OFICIAL DE RETOMADA — GRAND CROSS LOCAL — PASSO 2080
 
 **LEIA ANTES DE CONTINUAR.** Último PASSO EXECUTADO com log recebido: **2080**. **PASSO 2081** já foi fornecido e está **PENDENTE DE EXECUÇÃO/RESULTADO**. Não iniciar 2082 até revisar o log 2081. A anotação no GitHub antes da reunião estava em passos 2013–2016; os passos 2017–2060 permanecem lacuna documental neste pacote.
