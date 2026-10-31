@@ -1,0 +1,3 @@
+# GrandCross Local — passos 1466 a 1469
+
+Quatro leituras de 96 bytes, continuacoes dos metodos WestC2S/WestS2C GetRmiIDList. Todas terminam com instrucao cuja primeira parte estava no bloco anterior: `mov rax,[rax+0xB8]; mov rax,[rax]; add rsp,0x28; ret`. Antes disso ocorre teste em +0xE0 e chamada de inicializacao condicional. RVAs globais anteriores: WestC2S 0x5FB7908, WestS2C 0x5FB7AC8. Evidencia de retorno por dados estaticos; o objeto retornado pode conter uma lista, mas ainda nao foi inspecionado. Nao houve identificacao numerica dos IDs nem demonstracao de comunicacao com servidor local.
