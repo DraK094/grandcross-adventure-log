@@ -1,0 +1,3 @@
+# Passos 1621 a 1626
+
+Rota S2C RVA 0x91A927, desmontagem dos 192 bytes: compara R8D com 13553 (0x34F1), para outros valores adiciona -14001 (0xFFFFC94F), valida indice <=377, e usa duas tabelas indexadas. O identificador candidato 14055 produz indice 54 (0x36). O primeiro acesso usa RVA 0x91D224 + indice; para 14055, ler byte no RVA 0x91D25A. O byte obtido e usado como indice da segunda tabela de dwords em RVA 0x91CE84 + 4*byte, contendo destino relativo ao modulo para salto indireto. Ainda falta ler essas entradas para identificar o handler e confirmar a associacao do ID 14055 ao metodo de login OK. Nenhuma autenticacao ou pacote de rede foi provado.
