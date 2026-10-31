@@ -1,0 +1,3 @@
+# Checkpoint 1960
+
+O elo entre `CSharp_RmiStub_SetCallbackProcessReceivedMessage` e a vtable de `NativeToRmiStubWrap` foi demonstrado por codigo nativo. Setter RVA 0x9C20 guarda callback +0x38; thunk RVA 0x1400 le handle +0x28 e salta callback +0x38; tabela virtual em RVA 0x100F8 inclui thunk RVA 0x1400 na segunda entrada. Declaracao gerenciada `Nettention.Proud.RmiStub.ProcessReceivedMessage` token 0x06000117 verificada em metadata. Nao se recuperou corpo managed nem observou callback em runtime, framing nem login local. Conquista: ponte de callback de recebimento comprovada, nao protocolo de rede.
