@@ -42,7 +42,7 @@ jobs:
                   found=1
                   ;;
               esac
-            done < <(git diff-tree --no-commit-id --name-only -r HEAD)
+            done < <(git show --format= --name-only HEAD)
             if [[ "$found" -eq 0 ]]; then
               echo 'Nenhum manifesto encontrado no commit atual.' >&2
               exit 1
