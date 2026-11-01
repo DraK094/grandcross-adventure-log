@@ -1,0 +1,5 @@
+# GrandCross Local — checkpoint 2358
+
+Verificação estática do metadata IL2CPP v29, com parser reproduzível. `Nettention.Proud.NetClient` declara 17 campos de evento terminados em `Handler`, mas apenas nove métodos `set_*Handler` nominalmente correspondentes. Nos nove pares, o índice IL2CPP do campo é exatamente 1 maior que o índice do parâmetro do setter. Oito campos não possuem setter nominal desse padrão na classe: noRmiProcessedHandler, receivedUserMessageHandler, p2pMemberJoinHandler, p2pMemberLeaveHandler, changeP2PRelayStateHandler, changeServerUdpStateHandler, p2pMemberOfflineHandler, p2pMemberOnlineHandler.
+
+**Interpretação limitada:** diferença na API declarada de eventos. Não implica que os oito campos nunca sejam utilizados, não revela inicialização ou associação real de callbacks e não demonstra compatibilidade com servidor local. Metadata SHA256 eea7a31712bfca44caaa85cee3874ae9092a035556fcdef10f6c6a1fe156448b. Evidência derivada local: GrandCross_2353_2358_event_setters.json, script gc_2353_2358_event_setters.py. Nenhum binário proprietário incluído.
