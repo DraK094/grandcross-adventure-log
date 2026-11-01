@@ -15,5 +15,6 @@
       "path": "docs/INDICE_CHECKPOINTS_2174_2400.md"
     }
   ],
-  "note": "Marco 2400: validacao dirigida dos quatro arquivos documentais; o workflow ignora manifestos historicos nao alterados no push."
+  "note": "Marco 2400: validacao dirigida dos quatro arquivos documentais; o workflow ignora manifestos historicos nao alterados no push.",
+  "workflow_revision": "Corrigido workflow de validacao dirigida em 01/11/2026"
 }
