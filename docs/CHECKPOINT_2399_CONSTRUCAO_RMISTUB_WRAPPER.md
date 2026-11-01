@@ -1,0 +1,7 @@
+# GrandCross Local — Checkpoint 2399: construção do wrapper RmiStub
+
+**Marco verificado por instruções x64 e leitura somente estática do ProudNetClientPlugin.dll.** A exportação `CSharp_NativeToRmiStubWrap_New` (RVA `0x9AA0`) chama a alocação para um objeto de `0x40` bytes e zera seus 64 bytes. O código configura o primeiro campo do objeto com o endereço de uma tabela `.rdata` de RVA `0x10298` e inicializa em zero os campos em `+0x28`, `+0x30` e `+0x38`. Essa tabela contém ponteiros consecutivos para os trampolins em RVA `0x1370`, `0x1380` e `0x1390`, que fazem saltos indiretos pelos mesmos campos. Os setters exportados `CSharp_RmiStub_SetCallbackGetRmiIDList`, `...Count` e `...ProcessReceivedMessage` gravam `rdx` nos campos `+0x28/+0x30/+0x38` de seu argumento objeto. Foram verificados 19 fragmentos de instruções diretamente nos bytes da DLL.
+
+**Conclusão delimitada:** o wrapper construído possui uma tabela de saltos e posições de callback compatíveis com os setters; a relação de layout está sustentada por instruções de inicialização, não só coincidência de offsets. Não prova chamadas dessas funções no Grand Cross, uso dos callbacks, IDs RMI, autenticação, protocolo nem servidor jogável.
+
+Reprodução local: `gc_2394_2399_constructor.py`, `GrandCross_2394_2399_wrapper_constructor.json`, `GrandCross_Local_CHECKPOINT_2399.md`. Sem distribuição de DLL proprietária ou dados de conta. Trilha de análise do cliente: avanço substancial; trilha servidor local funcional: inalterada.
