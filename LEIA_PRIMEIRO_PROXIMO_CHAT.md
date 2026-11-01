@@ -1,3 +1,7 @@
+> **INVESTIGAÇÃO ATUAL — 01/11/2026: PASSO 2408 CONCLUÍDO; PRÓXIMO 2409 (NÃO EXECUTADO).** [Checkpoint 2408](docs/CHECKPOINT_2408_REVISAO_TABELAS.md). Correção: o grupo A (`0x10248`) é subconjunto de uma sequência maior de ponteiros, não uma tabela isolada comprovada. O construtor do wrapper do grupo B configura tabelas em `+0` e `+0x18`. Evidência exclusivamente estática; servidor compatível NÃO demonstrado. As referências ao PASSO 2400 abaixo são o marco formal histórico anterior.
+
+---
+
 > **RETOMADA ATUAL — 01/11/2026. ÚLTIMO PASSO 2400 VALIDADO; PASSO 2401 PENDENTE.** Este cabeçalho substitui todos os números antigos neste manual. Consulte [STATUS ATUAL](docs/STATUS_ATUAL_2400.md), [ROADMAP](docs/ROADMAP_POS_2400.md), [ÍNDICE 2174–2400](docs/INDICE_CHECKPOINTS_2174_2400.md) e [CHECKPOINT 2400](docs/CHECKPOINT_2400_GRUPOS_TRAMPOLINS.md). Meta imediata: investigar referências/construção do grupo A de trampolins em `ProudNetClientPlugin.dll`, sem assumir que existe chamada real pelo jogo. **Nenhum servidor jogável ou login local comprovado.** Versão antiga deste manual é HISTÓRICA, inclusive a indicação de passo 1175. Confirmar hashes e presença local dos binários antes de trabalhar; nunca publicar DLLs, metadados brutos, tokens, credenciais ou dados de conta.
 
 ---
