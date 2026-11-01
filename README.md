@@ -1,3 +1,7 @@
+> **PESQUISA ATUAL — 01/11/2026: PASSO 2432 concluído; próximo 2433 pendente.** [Checkpoint 2432](docs/CHECKPOINT_2432_DESPACHO_EVENTOS.md): 16 de 17 campos de callbacks foram associados estaticamente a saltos indiretos de trampolins nativos; o caso `Exception` (+0x68) requer estudo da função 0x1170. Nenhuma execução efetiva pelo Grand Cross ou servidor funcional demonstrado. Os cabeçalhos com passos anteriores são históricos.
+
+---
+
 > **STATUS TÉCNICO — 01/11/2026: PASSO 2424 concluído; próximo 2425 pendente.** [Checkpoint 2424 — 17 setters de eventos e aliases de código](docs/CHECKPOINT_2424_EVENT_SETTERS_ALIASES.md). O mapeamento nativo confirmou offsets +0x18..+0x98 no wrapper NetClientEvent de 0xA0 bytes. Três funções exportadas de RmiStub compartilham RVAs com setters de eventos; isso não prova identidade de objeto. **Análise estática somente. Nenhum servidor jogável confirmado.** Os cabeçalhos anteriores abaixo são registros históricos.
 
 ---
