@@ -1,3 +1,7 @@
+> **RETOMADA ATUAL — 01/11/2026. ÚLTIMO PASSO 2400 VALIDADO; PASSO 2401 PENDENTE.** Este cabeçalho substitui todos os números antigos neste manual. Consulte [STATUS ATUAL](docs/STATUS_ATUAL_2400.md), [ROADMAP](docs/ROADMAP_POS_2400.md), [ÍNDICE 2174–2400](docs/INDICE_CHECKPOINTS_2174_2400.md) e [CHECKPOINT 2400](docs/CHECKPOINT_2400_GRUPOS_TRAMPOLINS.md). Meta imediata: investigar referências/construção do grupo A de trampolins em `ProudNetClientPlugin.dll`, sem assumir que existe chamada real pelo jogo. **Nenhum servidor jogável ou login local comprovado.** Versão antiga deste manual é HISTÓRICA, inclusive a indicação de passo 1175. Confirmar hashes e presença local dos binários antes de trabalhar; nunca publicar DLLs, metadados brutos, tokens, credenciais ou dados de conta.
+
+---
+
 # LEIA PRIMEIRO — GRANDCROSS LOCAL
 
 > **ATUALIZAÇÃO 30/10/2026 — LEIA ANTES DAS NOTAS HISTÓRICAS ABAIXO:** o manual antigo parou em 1174, mas o histórico foi recuperado até o **PASSO 1288** (auditoria documental); **1289 está preparado, não executado**. O backend do laboratório ainda não está conectado ao cliente. Consulte [checkpoint recuperado](Copias_de_seguranca_relatorios_e_scripts_backup/relatorios/CHECKPOINT_RECUPERACAO_1175_1288_2026-10-30.md) e [política de backup a cada 10 passos](Copias_de_seguranca_relatorios_e_scripts_backup/relatorios/POLITICA_BACKUP_CADA_10_PASSOS.md). **Próximo marco: 1290 concluído.** Não retomar do 1175. Os marcos só são publicados quando concluídos, e cada commit deve ser confirmado.
