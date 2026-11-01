@@ -27,7 +27,30 @@ jobs:
           CHECKPOINT_STEP: ${{ github.event.inputs.step }}
         run: |
           mkdir -p checkpoint-export
-          python3 scripts/validate_checkpoint.py --dir checkpoints --out checkpoint-export --step "$CHECKPOINT_STEP"
+          if [ -n "$CHECKPOINT_STEP" ]; then
+            python3 scripts/validate_checkpoint.py --dir checkpoints --out checkpoint-export --step "$CHECKPOINT_STEP"
+          else
+            # Em push, validar apenas manifestos alterados no commit atual.
+            mapfile -t manifests < <(git show --pretty=format: --name-only HEAD | grep -E '^checkpoints/PASSO_[0-9]+\.json
+      - name: Arquivar pacote de evidencias
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grandcross-checkpoints-${{ github.run_number }}
+          path: checkpoint-export/
+          if-no-files-found: error
+          retention-days: 90
+ | sort -u)
+            if [ "${#manifests[@]}" -eq 0 ]; then
+              echo "Nenhum manifesto PASSO_*.json alterado neste commit."
+              exit 1
+            fi
+            for manifest in "${manifests[@]}"; do
+              step="${manifest##*/PASSO_}"
+              step="${step%.json}"
+              python3 scripts/validate_checkpoint.py --dir checkpoints --out checkpoint-export --step "$step"
+            done
+          fi
       - name: Arquivar pacote de evidencias
         if: success()
         uses: actions/upload-artifact@v4
