@@ -1,3 +1,9 @@
+> **ATUALIZAÇÃO GERAL — 01/11/2026 | ÚLTIMO PASSO VALIDADO: 2400 | PRÓXIMO: 2401 (NÃO EXECUTADO).** Este bloco prevalece sobre cabeçalhos históricos abaixo. [PAINEL DE STATUS](docs/STATUS_ATUAL_2400.md) · [ROTEIRO TÉCNICO](docs/ROADMAP_POS_2400.md) · [ÍNDICE DE EVIDÊNCIAS](docs/INDICE_CHECKPOINTS_2174_2400.md) · [MARCO 2400](docs/CHECKPOINT_2400_GRUPOS_TRAMPOLINS.md).
+>
+> **Análise do cliente:** metadados IL2CPP v29, handlers/delegates, ponte ProudNet P/Invoke e implementações nativas de setters/trampolins/estrutura RmiStub estudados por evidência estática. **Servidor compatível/jogável:** NÃO demonstrado; sem handshake, login local ou taverna local com o cliente oficial. **Correção essencial:** a errata do [passo 2272](docs/CHECKPOINT_2272_ERRATA_EXPORTS.md) substitui alegações antigas sobre localização e disponibilidade dos exports IL2CPP (28/384 exports com bytes no disco, 356/384 sem bytes raw no destino; exports na primeira seção sem nome, NÃO em .vdata). Não transformar números de passos em percentual de servidor.
+
+---
+
 ## ✅ PASSO 2081 — DICIONÁRIO DE MISSÕES VALIDADO (31/10/2026)
 
 **Último passo executado e validado: 2081. Próximo passo 2082 NÃO emitido: reunião técnica em andamento.** State.m_dicPackageMissionData em +0x1D8 aponta para um objeto System.Collections.Generic.Dictionary`2, com layout básico verificado. Chave/valor concretos e escrita dinâmica ainda não confirmados. [Relatório 2081](./docs/PASSO_2081_DICIONARIO_MISSOES.md). Nenhum servidor local funcional comprovado.
