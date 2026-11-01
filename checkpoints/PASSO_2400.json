@@ -16,5 +16,5 @@
     }
   ],
   "note": "Marco 2400: validacao dirigida dos quatro arquivos documentais; o workflow ignora manifestos historicos nao alterados no push.",
-  "workflow_revision": "Verificacao GitHub Actions com git show em checkout shallow"
+  "workflow_revision": "Validacao do checkpoint numericamente mais recente em push, selecao explicita em workflow_dispatch"
 }
