@@ -1,3 +1,7 @@
+> **STATUS 01/11/2026:** marco **2400 concluído**. O manifesto [PASSO_2400.json](PASSO_2400.json) referencia documentos atuais existentes no repositório. Consultar [status consolidado](../docs/STATUS_ATUAL_2400.md). A documentação abaixo referente ao marco 1290 é **histórica**. Publicar um manifesto não significa que o GitHub Actions já tenha executado com sucesso; conferir a execução separadamente.
+
+---
+
 # Checkpoints automatizados do GrandCross Local
 
 O workflow `.github/workflows/grandcross-checkpoint.yml` é disparado ao adicionar ou alterar um arquivo `checkpoints/PASSO_NNNN.json`. Ele **não detecta passos dentro do ChatGPT**: o assistente precisa publicar o manifesto e as evidências primeiro.
