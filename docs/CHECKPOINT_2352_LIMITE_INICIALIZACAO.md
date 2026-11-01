@@ -1,0 +1,7 @@
+# GrandCross Local — checkpoint 2352
+
+A análise estática somente leitura da cópia de `global-metadata.dat` verificou três pares de assinaturas de ponteiros: `NativeInternalProxy.GetNativeProxy() -> IntPtr` ↔ `NativeNetClient.AttachProxy(IntPtr)`; `NativeInternalStub.GetNativeStub() -> IntPtr` ↔ `NativeNetClient.AttachStub(IntPtr)`; `NativeInternalNetClientEvent.GetNativeNetClientEvent() -> IntPtr` ↔ `NativeNetClient.SetEventSink(IntPtr)`. O índice IL2CPP comum é 37861 (`System.IntPtr`).
+
+Foram identificados 30 métodos declarados em `NetClient`, 14 em `NativeNetClient`, 23 em `NativeInternalNetClientEvent`, e oito em cada adaptador proxy/stub. Há declarações de construtores e operações de ciclo de vida, mas **o metadata não contém prova da ordem de chamadas**; associação entre assinaturas não implica registro ou invocação de callbacks.
+
+Resultado: contratos estruturalmente compatíveis confirmados; sequência de inicialização efetiva ainda indeterminada. Nenhuma autenticação, handshake, protocolo do Grand Cross ou compatibilidade de servidor local jogável foi demonstrada. Arquivos reproduzíveis produzidos localmente: `gc_2347_2352_lifecycle.py`, `GrandCross_2347_2352_lifecycle_evidence.json`, `GrandCross_Local_CHECKPOINT_2352.md`. Sem publicação de arquivos proprietários.
