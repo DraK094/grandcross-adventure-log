@@ -1,3 +1,7 @@
+> **STATUS TÉCNICO — 01/11/2026: PASSO 2424 concluído; próximo 2425 pendente.** [Checkpoint 2424 — 17 setters de eventos e aliases de código](docs/CHECKPOINT_2424_EVENT_SETTERS_ALIASES.md). O mapeamento nativo confirmou offsets +0x18..+0x98 no wrapper NetClientEvent de 0xA0 bytes. Três funções exportadas de RmiStub compartilham RVAs com setters de eventos; isso não prova identidade de objeto. **Análise estática somente. Nenhum servidor jogável confirmado.** Os cabeçalhos anteriores abaixo são registros históricos.
+
+---
+
 > **INVESTIGAÇÃO ATUAL — 01/11/2026: PASSO 2408 CONCLUÍDO; PRÓXIMO 2409 (NÃO EXECUTADO).** [Checkpoint 2408](docs/CHECKPOINT_2408_REVISAO_TABELAS.md). Correção: o grupo A (`0x10248`) é subconjunto de uma sequência maior de ponteiros, não uma tabela isolada comprovada. O construtor do wrapper do grupo B configura tabelas em `+0` e `+0x18`. Evidência exclusivamente estática; servidor compatível NÃO demonstrado. As referências ao PASSO 2400 abaixo são o marco formal histórico anterior.
 
 ---
